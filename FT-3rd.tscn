@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxbiec8rye8il"]
+[gd_scene load_steps=6 format=3 uid="uid://3wv3lrlwp68x"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2u1vp"]
 
@@ -60,7 +60,6 @@ mesh = SubResource("BoxMesh_2u1vp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Plane"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_2u1vp")
 
 [node name="Player" type="RigidBody3D" parent="."]

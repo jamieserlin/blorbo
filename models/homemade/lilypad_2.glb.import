@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://grfxexw4tt6k"
-path="res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"
+uid="uid://41n26fb44fbk"
+path="res://.godot/imported/lilypad_2.glb-7c4b2d9e43e5322c6b2fce91c8c8ab31.scn"
 
 [deps]
 
-source_file="res://models/homemade/pillar_3.glb"
-dest_files=["res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"]
+source_file="res://models/homemade/lilypad_2.glb"
+dest_files=["res://.godot/imported/lilypad_2.glb-7c4b2d9e43e5322c6b2fce91c8c8ab31.scn"]
 
 [params]
 

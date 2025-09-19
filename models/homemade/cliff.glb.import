@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://grfxexw4tt6k"
-path="res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"
+uid="uid://drodslh8u77x3"
+path="res://.godot/imported/cliff.glb-a01239812afca117ec009f5d088f931e.scn"
 
 [deps]
 
-source_file="res://models/homemade/pillar_3.glb"
-dest_files=["res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"]
+source_file="res://models/homemade/cliff.glb"
+dest_files=["res://.godot/imported/cliff.glb-a01239812afca117ec009f5d088f931e.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"@MATERIAL:0": {
+"use_external/enabled": true,
+"use_external/path": "uid://btxd5pns5qjq8"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

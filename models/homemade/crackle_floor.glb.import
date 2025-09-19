@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://grfxexw4tt6k"
-path="res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"
+uid="uid://cdv4xwdt75r4n"
+path="res://.godot/imported/crackle_floor.glb-bd3d7811a44d2ad75e0a9bf3e4d0f7c2.scn"
 
 [deps]
 
-source_file="res://models/homemade/pillar_3.glb"
-dest_files=["res://.godot/imported/pillar_3.glb-aafb66a0efa663e2c9c764562a8dc4a8.scn"]
+source_file="res://models/homemade/crackle_floor.glb"
+dest_files=["res://.godot/imported/crackle_floor.glb-bd3d7811a44d2ad75e0a9bf3e4d0f7c2.scn"]
 
 [params]
 
