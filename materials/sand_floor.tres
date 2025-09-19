@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmejy4ael2isp"]
+
+[ext_resource type="Texture2D" uid="uid://c40c08qhjoay" path="res://textures/cc0_level_textures/rendered_crazy_groove.png" id="1_eveoc"]
+
+[resource]
+albedo_texture = ExtResource("1_eveoc")
