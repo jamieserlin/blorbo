@@ -68,7 +68,7 @@ func _physics_process(delta: float) -> void:
 	var is_starting_dive := Input.is_action_just_pressed("RightClick")
 	
 	
-	if is_starting_dive and !has_dived:
+	if is_starting_dive and !has_dived and !is_on_floor():
 		velocity.y += jump_impulse /2
 		velocity = dive_impulse * -forward
 		has_dived = true
