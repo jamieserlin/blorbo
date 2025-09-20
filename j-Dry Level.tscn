@@ -385,6 +385,7 @@ transform = Transform3D(-16.6924, 0, -23.2883, 0, 28.6528, 0, 23.2883, 0, -16.69
 transform = Transform3D(24.9409, 0, 22.2668, 0, 33.4344, 0, -22.2668, 0, 24.9409, -258.17, 6.02591, -93.4548)
 
 [node name="j-Player" parent="." instance=ExtResource("9_frs7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.3933, 0, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(4.34934, -0.297242, 0, 1.354, 0.954802, 0, 0, 0, 5.61046, 34.8929, 3.5621, 0.326222)

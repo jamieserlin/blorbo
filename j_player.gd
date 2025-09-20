@@ -15,6 +15,11 @@ extends CharacterBody3D
 @export var jump_impulse := 12.0
 @export var _gravity = -30.0
 
+##Dive References
+@export var dive_impulse := 20.0
+@export var has_dived = false;
+@export var can_dive = true;
+
 func _input(event:InputEvent) -> void:
 	if event.is_action_pressed("LeftClick"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -57,5 +62,17 @@ func _physics_process(delta: float) -> void:
 	var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
 	if is_starting_jump:
 		velocity.y += jump_impulse
+		
+	##DIVING
+
+	var is_starting_dive := Input.is_action_just_pressed("RightClick")
+	
+	
+	if is_starting_dive and !has_dived:
+		velocity.y += jump_impulse /2
+		velocity = dive_impulse * -forward
+		has_dived = true
+	if is_on_floor():
+		has_dived = false;
 
 	move_and_slide()
