@@ -1,4 +1,5 @@
 extends CharacterBody3D
+@onready var audio_manager = get_tree().get_first_node_in_group("audio_manager")
 
 ##Camera References
 @export_group("Camera")
@@ -61,14 +62,17 @@ func _physics_process(delta: float) -> void:
 	
 	var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
 	if is_starting_jump:
+		audio_manager.player_jump()
 		velocity.y += jump_impulse
 		
 	##DIVING
-
+	if velocity.x != 0 && is_on_floor():
+		audio_manager.player_walk()
 	var is_starting_dive := Input.is_action_just_pressed("RightClick")
 	
 	
 	if is_starting_dive and !has_dived and !is_on_floor():
+		audio_manager.player_dive()
 		velocity.y += jump_impulse /2
 		velocity = dive_impulse * -forward
 		has_dived = true
