@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cld24riuonmie"
+path="res://.godot/imported/hippocampus.dialogue-e022728ffe6b79d392327e84683722df.tres"
+
+[deps]
+
+source_file="res://hippocampus.dialogue"
+dest_files=["res://.godot/imported/hippocampus.dialogue-e022728ffe6b79d392327e84683722df.tres"]
+
+[params]
+
+defaults=true
