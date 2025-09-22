@@ -37,7 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_input_direction = event.screen_relative * mouse_sensitivity
 	else:
 		_camera_input_direction = Input.get_vector("Joy_left", 
-		"Joy_right", "Joy_up", "Joy_down") * 2
+		"Joy_right", "Joy_up", "Joy_down") * 3.5
 		
 
 func _physics_process(delta: float) -> void:

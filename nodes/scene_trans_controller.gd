@@ -10,7 +10,7 @@ func _ready() -> void:
 	enviro_1 = get_tree().get_first_node_in_group("enviro_1")
 	enviro_2 = get_tree().get_first_node_in_group("enviro_2")
 	objects = get_tree().get_nodes_in_group("dissolve")
-	#change_enviro = true
+	change_enviro = true
 	pass # Replace with function body.
 
 
