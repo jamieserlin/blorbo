@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://8rlh8ywhwq3n"]
+
+[ext_resource type="Shader" uid="uid://bdlef4py0xpk5" path="res://shaders/dissolve.gdshader" id="1_13uwk"]
+[ext_resource type="Texture2D" uid="uid://c40c08qhjoay" path="res://textures/cc0_level_textures/rendered_crazy_groove.png" id="2_wjd28"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_13uwk")
+shader_parameter/baseColor = Color(1, 1, 1, 1)
+shader_parameter/baseColorTexture = ExtResource("2_wjd28")
+shader_parameter/dissolveSlider = 0.0
+shader_parameter/dissolveNoiseScale = 2.0
+shader_parameter/edgeNoiseScale = 0.0
+shader_parameter/edgesThickness = 0.01
+shader_parameter/edgeColor = Color(0, 0, 1, 1)
+shader_parameter/edgeEmissionSlider = 1.0
+shader_parameter/enable_dissolve_animation = true
+shader_parameter/animation_speed = 1.0
+shader_parameter/animation_intensity = 0.2

@@ -22,6 +22,9 @@ enabled=PackedStringArray("res://addons/stairs/plugin.cfg")
 [global_group]
 
 audio_manager=""
+dissolve=""
+enviro_1=""
+enviro_2=""
 
 [input]
 

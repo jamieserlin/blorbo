@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4n2piq7e0ild"]
+[gd_scene load_steps=4 format=3 uid="uid://b4n2piq7e0ild"]
 
 [ext_resource type="PackedScene" uid="uid://dxtiug36bo7y" path="res://nodes/e-audio_manager.tscn" id="1_b1xpd"]
 [ext_resource type="PackedScene" uid="uid://e3087lmnirb" path="res://Main Menu.tscn" id="2_tysgj"]
+[ext_resource type="PackedScene" uid="uid://voqe8fb3t7fq" path="res://nodes/scene_trans_controller.tscn" id="3_tysgj"]
 
 [node name="root_node" type="Node"]
 
 [node name="audio_manager" parent="." instance=ExtResource("1_b1xpd")]
 
 [node name="MainMenu" parent="." instance=ExtResource("2_tysgj")]
+
+[node name="SceneTransController" parent="." instance=ExtResource("3_tysgj")]
