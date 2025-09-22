@@ -1,6 +1,12 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmejy4ael2isp"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cmejy4ael2isp"]
 
-[ext_resource type="Texture2D" uid="uid://c40c08qhjoay" path="res://textures/cc0_level_textures/rendered_crazy_groove.png" id="1_eveoc"]
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_eveoc"]
 
 [resource]
-albedo_texture = ExtResource("1_eveoc")
+render_priority = 0
+shader = ExtResource("1_eveoc")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0
