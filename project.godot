@@ -15,6 +15,12 @@ run/main_scene="uid://b4n2piq7e0ild"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+window/stretch/aspect="keep_width"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/csg_terrain/plugin.cfg", "res://addons/stairs/plugin.cfg")
@@ -113,3 +119,12 @@ Joy_right={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+occlusion_culling/bvh_build_quality=1
+textures/canvas_textures/default_texture_filter=0
+scaling_3d/scale=0.45
+textures/decals/filter=0
+textures/light_projectors/filter=0
+occlusion_culling/occlusion_rays_per_thread=256
