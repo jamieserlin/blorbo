@@ -23,5 +23,5 @@ func _physics_process(delta: float) -> void:
 		audio_manager.menu_up_play()
 	if Input.is_action_just_pressed("ui_down"):
 		audio_manager.menu_down_play()
-	if Input.is_action_just_pressed("Enter") or Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("Enter") or Input.is_action_just_pressed("ui_select") or Input.is_action_just_pressed("Jump"):
 		audio_manager.menu_select_play()

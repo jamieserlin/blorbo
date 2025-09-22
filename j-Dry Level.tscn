@@ -343,46 +343,46 @@ transform = Transform3D(0.748878, 0, 0, 0, 0.918088, 0, 0, 0, 0.748878, 12.8206,
 transform = Transform3D(0.335, 0, 0, 0, 0.335, 0, 0, 0, 0.335, 31.435, -3.8147e-06, -14.5901)
 
 [node name="rock" parent="enviro" instance=ExtResource("7_frs7x")]
-transform = Transform3D(8.72918, 0, 0, 0, 8.72918, 0, 0, 0, 8.72918, 12.2975, 6.51053, 135.942)
+transform = Transform3D(8.72918, 0, 0, 0, 8.72918, 0, 0, 0, 8.72918, 12.2975, -6.72745, 135.942)
 
 [node name="clif_2" parent="enviro" instance=ExtResource("8_orfmb")]
-transform = Transform3D(11.3253, 0, 3.23743, 0, 11.779, 0, -3.23743, 0, 11.3253, 72.3925, 7.63608, 128.969)
+transform = Transform3D(11.3253, 0, 3.23743, 0, 11.779, 0, -3.23743, 0, 11.3253, 72.3925, -5.6019, 128.969)
 
 [node name="cliff" parent="enviro" instance=ExtResource("9_2mtro")]
-transform = Transform3D(-3.21427, 0, -11.2898, 0, 11.7384, 0, 11.2898, 0, -3.21427, -284.593, 7.11796, 135.113)
+transform = Transform3D(-3.21427, 0, -11.2898, 0, 11.7384, 0, 11.2898, 0, -3.21427, -284.593, -6.12002, 135.113)
 
 [node name="cliff2" parent="enviro" instance=ExtResource("9_2mtro")]
-transform = Transform3D(-17.269, 0, 7.96659, 0, 19.018, 0, -7.96659, 0, -17.269, -185.061, 7.46687, 179.216)
+transform = Transform3D(-17.269, 0, 7.96659, 0, 19.018, 0, -7.96659, 0, -17.269, -185.061, -5.77111, 179.216)
 
 [node name="rock2" parent="enviro" instance=ExtResource("7_frs7x")]
-transform = Transform3D(10.2706, 0, 6.09652, 0, 11.9437, 0, -6.09652, 0, 10.2706, -275.084, 6.44104, -8.87804)
+transform = Transform3D(10.2706, 0, 6.09652, 0, 11.9437, 0, -6.09652, 0, 10.2706, -275.084, -6.79694, -8.87804)
 
 [node name="clif_3" parent="enviro" instance=ExtResource("8_orfmb")]
-transform = Transform3D(-11.7513, 0, 0.267496, 0, 11.7544, 0, -0.267496, 0, -11.7513, -46.0692, 7.15346, 155.966)
+transform = Transform3D(-11.7513, 0, 0.267496, 0, 11.7544, 0, -0.267496, 0, -11.7513, -46.0692, -6.08452, 155.966)
 
 [node name="cliff3" parent="enviro" instance=ExtResource("9_2mtro")]
-transform = Transform3D(4.40117, 0, -6.4983, 0, 7.84845, 0, 6.4983, 0, 4.40117, 213.146, 7.58255, -50.2163)
+transform = Transform3D(4.40117, 0, -6.4983, 0, 7.84845, 0, 6.4983, 0, 4.40117, 213.146, -5.65543, -50.2163)
 
 [node name="rock3" parent="enviro" instance=ExtResource("7_frs7x")]
-transform = Transform3D(6.41239, 0, -5.49279, 0, 8.44331, 0, 5.49279, 0, 6.41239, 199.544, 6.76937, -17.1897)
+transform = Transform3D(6.41239, 0, -5.49279, 0, 8.44331, 0, 5.49279, 0, 6.41239, 199.544, -6.46861, -17.1897)
 
 [node name="clif_4" parent="enviro" instance=ExtResource("8_orfmb")]
-transform = Transform3D(19.8022, 0, -6.79641, 0, 20.936, 0, 6.79641, 0, 19.8022, 79.0575, 7.87384, -60.0136)
+transform = Transform3D(19.8022, 0, -6.79641, 0, 20.936, 0, 6.79641, 0, 19.8022, 79.0575, -5.36414, -60.0136)
 
 [node name="clif_5" parent="enviro" instance=ExtResource("8_orfmb")]
-transform = Transform3D(11.1334, 0, -2.77609, 0, 11.4743, 0, 2.77609, 0, 11.1334, -70.4884, 7.87385, -99.1742)
+transform = Transform3D(11.1334, 0, -2.77609, 0, 11.4743, 0, 2.77609, 0, 11.1334, -70.4884, -5.36413, -99.1742)
 
 [node name="cliff4" parent="enviro" instance=ExtResource("9_2mtro")]
-transform = Transform3D(4.02191, 0, -4.34175, 0, 5.91833, 0, 4.34175, 0, 4.02191, -29.4117, 7.87384, -24.4424)
+transform = Transform3D(4.02191, 0, -4.34175, 0, 5.91833, 0, 4.34175, 0, 4.02191, -29.4117, -5.36414, -24.4424)
 
 [node name="cliff5" parent="enviro" instance=ExtResource("9_2mtro")]
-transform = Transform3D(30.2794, 0, 13.4218, 0, 33.1208, 0, -13.4218, 0, 30.2794, -208.782, 9.57752, -230.587)
+transform = Transform3D(30.2794, 0, 13.4218, 0, 33.1208, 0, -13.4218, 0, 30.2794, -208.782, -3.66046, -230.587)
 
 [node name="rock4" parent="enviro" instance=ExtResource("7_frs7x")]
-transform = Transform3D(-16.6924, 0, -23.2883, 0, 28.6528, 0, 23.2883, 0, -16.6924, -88.2664, 6.02596, -239.057)
+transform = Transform3D(-16.6924, 0, -23.2883, 0, 28.6528, 0, 23.2883, 0, -16.6924, -88.2664, -7.21202, -239.057)
 
 [node name="rock5" parent="enviro" instance=ExtResource("7_frs7x")]
-transform = Transform3D(24.9409, 0, 22.2668, 0, 33.4344, 0, -22.2668, 0, 24.9409, -258.17, 6.02591, -93.4548)
+transform = Transform3D(24.9409, 0, 22.2668, 0, 33.4344, 0, -22.2668, 0, 24.9409, -258.17, -7.21207, -93.4548)
 
 [node name="j-Player" parent="." instance=ExtResource("9_frs7x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.3933, 0, 0)

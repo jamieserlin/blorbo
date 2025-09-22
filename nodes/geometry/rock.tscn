@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://b2vuwn7rcbk50"]
+[gd_scene load_steps=9 format=4 uid="uid://b2vuwn7rcbk50"]
 
 [ext_resource type="Texture2D" uid="uid://g2ih70rha0he" path="res://models/homemade/outside_rendered_stained1.png" id="1_oqls1"]
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="2_16fif"]
+[ext_resource type="Texture2D" uid="uid://c8y4xais2e3w2" path="res://textures/cc0_level_textures/rendered_stained2.png" id="3_pnjg7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plw84"]
 resource_name = "Material.001"
@@ -42,12 +44,23 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ubera")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ts40f"]
+render_priority = 0
+shader = ExtResource("2_16fif")
+shader_parameter/albedo = ExtResource("3_pnjg7")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hk3jx"]
 data = PackedVector3Array(0, -0.531601, 0, -0.276385, -0.447215, 0.85064, 0.7236, -0.447215, 0.52572, 0.7236, -0.447215, 0.52572, 0.7236, -0.447215, -0.52572, 0, -0.531601, 0, 0, -0.531601, 0, -0.894425, -0.447215, 0, -0.276385, -0.447215, 0.85064, 0, -0.531601, 0, -0.276385, -0.447215, -0.85064, -0.894425, -0.447215, 0, 0, -0.531601, 0, 0.7236, -0.447215, -0.52572, -0.276385, -0.447215, -0.85064, 0.7236, -0.447215, 0.52572, 1.35148, 1.75724, -0.17615, 0.7236, -0.447215, -0.52572, -0.276385, -0.447215, 0.85064, 0.733438, 1.21926, 0.67449, 0.7236, -0.447215, 0.52572, -0.894425, -0.447215, 0, -0.973452, 2.59493, 0.257014, -0.276385, -0.447215, 0.85064, -0.276385, -0.447215, -0.85064, -0.973452, 1.91847, -0.794426, -0.894425, -0.447215, 0, 0.7236, -0.447215, -0.52572, 0.276385, 1.66166, -0.85064, -0.276385, -0.447215, -0.85064, 0.7236, -0.447215, 0.52572, 0.733438, 1.21926, 0.67449, 1.35148, 1.75724, -0.17615, -0.276385, -0.447215, 0.85064, -0.973452, 2.59493, 0.257014, 0.733438, 1.21926, 0.67449, -0.894425, -0.447215, 0, -0.973452, 1.91847, -0.794426, -0.973452, 2.59493, 0.257014, -0.276385, -0.447215, -0.85064, 0.276385, 1.66166, -0.85064, -0.973452, 1.91847, -0.794426, 0.7236, -0.447215, -0.52572, 1.35148, 1.75724, -0.17615, 0.276385, 1.66166, -0.85064, 0.733438, 1.21926, 0.67449, 0.2072, 3.2433, -0.444856, 1.35148, 1.75724, -0.17615, -0.973452, 2.59493, 0.257014, 0.2072, 3.2433, -0.444856, 0.733438, 1.21926, 0.67449, -0.973452, 1.91847, -0.794426, 0.2072, 3.2433, -0.444856, -0.973452, 2.59493, 0.257014, 0.276385, 1.66166, -0.85064, 0.2072, 3.2433, -0.444856, -0.973452, 1.91847, -0.794426, 1.35148, 1.75724, -0.17615, 0.2072, 3.2433, -0.444856, 0.276385, 1.66166, -0.85064)
 
 [node name="rock" type="MeshInstance3D"]
 mesh = SubResource("ArrayMesh_e27kh")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_ts40f")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
