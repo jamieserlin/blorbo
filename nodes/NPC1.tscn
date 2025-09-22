@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cammyb3ov7ssc"]
+
+[ext_resource type="PackedScene" path="res://nodes/hippocampus.tscn" id="1_lh768"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_lh768")]
