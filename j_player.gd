@@ -1,5 +1,6 @@
 extends CharacterBody3D
-@onready var audio_manager = get_tree().get_first_node_in_group("audio_manager")
+@onready var audio_manager = get_tree().get_first_node_in_group("audio_manager") 
+## ^^ This is refferencing the e-audio_manager.tscn which must also be dragged into a new scene alongside the j-Player
 
 ##Camera References
 @export_group("Camera")
@@ -73,7 +74,6 @@ func _physics_process(delta: float) -> void:
 		audio_manager.player_walk()
 	var is_starting_dive := Input.is_action_just_pressed("RightClick")
 	
-	
 	if is_starting_dive and !has_dived and !is_on_floor():
 		audio_manager.player_dive()
 		velocity.y += jump_impulse /2
@@ -81,5 +81,5 @@ func _physics_process(delta: float) -> void:
 		has_dived = true
 	if is_on_floor():
 		has_dived = false;
-
+		
 	move_and_slide()

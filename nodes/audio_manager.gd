@@ -1,10 +1,10 @@
 extends Node3D
 
 #all sounds
-var jump_sfx = preload("res://sounds/sfx_movement_jump15.wav")
-var dive_sfx = preload("res://sounds/sfx_movement_jump13.wav")
-var walk_sfx_1 = preload("res://sounds/sfx_movement_footsteps1a.wav")
-var walk_sfx_2 = preload("res://sounds/sfx_movement_footsteps1b.wav")
+var jump_sfx = preload("res://sounds/player_sfx/sfx_movement_jump15.wav")
+var dive_sfx = preload("res://sounds/player_sfx/sfx_movement_jump13.wav")
+var walk_sfx_1 = preload("res://sounds/player_sfx/sfx_movement_footsteps1a.wav")
+var walk_sfx_2 = preload("res://sounds/player_sfx/sfx_movement_footsteps1b.wav")
 var left_right_step = false
 
 #menu sounds
