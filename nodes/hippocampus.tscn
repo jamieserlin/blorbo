@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://rh8xw8b36ch4"]
 
-[ext_resource type="Texture2D" uid="uid://c0qkaad35j0go" path="res://textures/hippopixel.png" id="1_ir6ks"]
+[ext_resource type="Texture2D" uid="uid://c0qkaad35j0go" path="res://sprites/NPCs/hippopixel.png" id="1_ir6ks"]
 
 [node name="Node3D" type="Sprite3D"]
 texture_filter = 0

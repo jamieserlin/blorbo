@@ -12,12 +12,15 @@ extends CharacterBody3D
 @export_group("Movement")
 @export var move_speed := 8.0
 @export var acceleration := 25.0
+@export var raw_input := Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 
 ##Jump References
+@export var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
 @export var jump_impulse := 12.0
 @export var _gravity = -30.0
 
 ##Dive References
+@export var is_starting_dive := Input.is_action_just_pressed("RightClick")
 @export var dive_impulse := 20.0
 @export var has_dived = false;
 @export var can_dive = true;
@@ -30,6 +33,12 @@ func _input(event:InputEvent) -> void:
 
 var _camera_input_direction := Vector2.ZERO
 func _unhandled_input(event: InputEvent) -> void:
+	
+	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
+	
+	is_starting_jump = Input.is_action_just_pressed("Jump") and is_on_floor()
+	is_starting_dive = Input.is_action_just_pressed("RightClick")
+	
 	var is_camera_motion := (
 		event is InputEventMouseMotion and 
 		Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -49,7 +58,7 @@ func _physics_process(delta: float) -> void:
 	_camera_input_direction = Vector2.ZERO
 	
 	##MOVEMENT
-	var raw_input := Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
+
 	var forward := _camera.global_basis.z
 	var right := _camera.global_basis.x
 	
@@ -64,7 +73,6 @@ func _physics_process(delta: float) -> void:
 	##JUMPING
 	velocity.y = y_velocity + _gravity * delta
 	
-	var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
 	if is_starting_jump:
 		audio_manager.player_jump()
 		velocity.y += jump_impulse
@@ -72,7 +80,6 @@ func _physics_process(delta: float) -> void:
 	##DIVING
 	if velocity.x != 0 && is_on_floor():
 		audio_manager.player_walk()
-	var is_starting_dive := Input.is_action_just_pressed("RightClick")
 	
 	if is_starting_dive and !has_dived and !is_on_floor():
 		audio_manager.player_dive()

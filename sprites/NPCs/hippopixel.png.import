@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0qkaad35j0go"
-path.s3tc="res://.godot/imported/hippopixel.png-7ca6a65f054388f5af37f61819aceb05.s3tc.ctex"
+path.s3tc="res://.godot/imported/hippopixel.png-0d2b43b94da8f02d1d0a3ebc36beb829.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/hippopixel.png"
-dest_files=["res://.godot/imported/hippopixel.png-7ca6a65f054388f5af37f61819aceb05.s3tc.ctex"]
+source_file="res://sprites/NPCs/hippopixel.png"
+dest_files=["res://.godot/imported/hippopixel.png-0d2b43b94da8f02d1d0a3ebc36beb829.s3tc.ctex"]
 
 [params]
 
