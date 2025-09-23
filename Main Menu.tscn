@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://e3087lmnirb"]
+[gd_scene load_steps=11 format=3 uid="uid://e3087lmnirb"]
 
 [ext_resource type="Texture2D" uid="uid://1n4sb3iaqvjs" path="res://textures/Sam_MainMenuTextures/MainMenuBackgrounkd.png" id="1_5b7ti"]
 [ext_resource type="Script" uid="uid://bxpogyd6fhl4k" path="res://main_menu.gd" id="1_dvdtt"]
+[ext_resource type="Script" uid="uid://bvtlfqo067po5" path="res://audio_control.gd" id="3_i5qic"]
+[ext_resource type="Script" uid="uid://c4mrb38r1t03s" path="res://fullscreen_control.gd" id="4_12kdf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvdtt"]
 texture = ExtResource("1_5b7ti")
@@ -26,6 +28,13 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 shadow_size = 5
 shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_dvdtt"]
+thickness = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_i5qic"]
+color = Color(0.766803, 0.445239, 0, 1)
+thickness = 4
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -98,6 +107,7 @@ text = "Quit
 "
 
 [node name="GameTitle" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,7 +139,7 @@ offset_bottom = 158.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="OptionsMenu"]
+[node name="OptionMenuText" type="Label" parent="OptionsMenu"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -151,7 +161,81 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i5qic")
 text = "Back
 "
 
+[node name="MusicControl" type="HSlider" parent="OptionsMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.5
+offset_top = 77.0
+offset_right = 166.5
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_dvdtt")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_i5qic")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_i5qic")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_i5qic")
+audio_bus_name = "Music"
+
+[node name="Label" type="Label" parent="OptionsMenu/MusicControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -12.0
+offset_right = -5.5
+offset_bottom = 11.0
+grow_vertical = 2
+text = "Music"
+
+[node name="SFXControl" type="HSlider" parent="OptionsMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.0
+offset_top = 124.0
+offset_right = 167.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_dvdtt")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_i5qic")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_i5qic")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_i5qic")
+audio_bus_name = "SFX"
+
+[node name="Label" type="Label" parent="OptionsMenu/SFXControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -12.0
+offset_right = 2.0
+offset_bottom = 11.0
+grow_vertical = 2
+text = "SFX"
+
+[node name="FullscreenControl" type="CheckButton" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = 22.5
+offset_top = 162.0
+offset_right = 149.5
+offset_bottom = 193.0
+text = "Fullscreen"
+script = ExtResource("4_12kdf")
+
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="OptionsMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="OptionsMenu/MusicControl" to="OptionsMenu/MusicControl" method="_on_value_changed"]
+[connection signal="value_changed" from="OptionsMenu/SFXControl" to="OptionsMenu/SFXControl" method="_on_value_changed"]
+[connection signal="toggled" from="OptionsMenu/FullscreenControl" to="OptionsMenu/FullscreenControl" method="_on_toggled"]
