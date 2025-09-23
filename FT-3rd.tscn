@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://3wv3lrlwp68x"]
+[gd_scene load_steps=7 format=3 uid="uid://3wv3lrlwp68x"]
 
 [ext_resource type="PackedScene" uid="uid://dnqv2ixg66yj5" path="res://j_player.tscn" id="1_2r2oh"]
 [ext_resource type="PackedScene" uid="uid://c1dmh0unjexip" path="res://j-imports/bloxy_cola.glb" id="2_t3oci"]
-[ext_resource type="Script" uid="uid://cn3ufil3gxstq" path="res://j-imports/bloxy_cola.gd" id="3_7on7e"]
 [ext_resource type="PackedScene" uid="uid://dxtiug36bo7y" path="res://nodes/e-audio_manager.tscn" id="3_byi7g"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2u1vp"]
@@ -30,7 +29,6 @@ transform = Transform3D(1, -0.000698134, -2.87693e-08, 2.87922e-08, 3.28891e-08,
 
 [node name="coler" parent="." instance=ExtResource("2_t3oci")]
 transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -8.01717, 0.692076, -0.601915)
-script = ExtResource("3_7on7e")
 
 [node name="Area3D" type="Area3D" parent="coler"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.822214, 0, 0)
