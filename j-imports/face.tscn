@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhlq8b561q03e"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwkv2383rav4w" path="res://j-imports/faceback.res" id="1_a4v4w"]
+[ext_resource type="Material" uid="uid://b0sb20gx1f3s2" path="res://materials/rock_2.tres" id="1_nmlbv"]
+[ext_resource type="ArrayMesh" uid="uid://dj6slyovwx405" path="res://j-imports/facefront.res" id="2_nmlbv"]
+
+[node name="face" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_nmlbv")
+mesh = ExtResource("1_a4v4w")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_nmlbv")
+mesh = ExtResource("2_nmlbv")

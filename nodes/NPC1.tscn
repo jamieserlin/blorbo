@@ -69,6 +69,7 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 script = ExtResource("1_r6ver")
 
 [node name="Node3D" parent="." instance=ExtResource("1_lh768")]
+billboard = 1
 
 [node name="ExampleBalloon" type="CanvasLayer" parent="."]
 layer = 100

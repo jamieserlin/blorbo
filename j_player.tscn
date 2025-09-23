@@ -25,7 +25,7 @@ script = ExtResource("1_7un63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 1, 0)
-billboard = 2
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_78scn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://beshbtvk2afjy"]
+
+[ext_resource type="PackedScene" uid="uid://dqi3flgdf473w" path="res://j-imports/low_poly_grey_boulder.glb" id="1_ugccr"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_ugccr")]
