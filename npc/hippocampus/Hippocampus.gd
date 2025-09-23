@@ -1,6 +1,6 @@
 extends Node3D
 #create a dialogue file in dialogue button above lol
-var resource = load("res://hippocampus.dialogue")
+var resource = load("res://npc/hippocampus/hippocampus.dialogue")
 #use the example balloon to create an interaction
 @onready var balloon = $ExampleBalloon
 

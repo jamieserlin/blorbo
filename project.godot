@@ -139,6 +139,7 @@ locale/translations_pot_files=PackedStringArray("res://npc/hippocampus/hippocamp
 occlusion_culling/bvh_build_quality=1
 textures/canvas_textures/default_texture_filter=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+scaling_3d/scale=0.6
 scaling_3d/fsr_sharpness=2.0
 textures/decals/filter=0
 textures/light_projectors/filter=0

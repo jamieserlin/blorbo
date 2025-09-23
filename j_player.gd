@@ -36,7 +36,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 	
-	is_starting_jump = Input.is_action_just_pressed("Jump") and is_on_floor()
+	is_starting_jump = Input.is_action_just_pressed("Jump")
 	is_starting_dive = Input.is_action_just_pressed("RightClick")
 	
 	var is_camera_motion := (
@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 	##JUMPING
 	velocity.y = y_velocity + _gravity * delta
 	
-	if is_starting_jump:
+	if is_starting_jump and is_on_floor():
 		audio_manager.player_jump()
 		velocity.y += jump_impulse
 		

@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://raqhhoxi4rby"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_c8xbc"]
+[ext_resource type="Texture2D" uid="uid://bb1ypcny3xqm" path="res://j-imports/tex/frame_00_delay-0.1s.jpg" id="2_760v3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_c8xbc")
+shader_parameter/albedo = ExtResource("2_760v3")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0
