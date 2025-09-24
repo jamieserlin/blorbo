@@ -9,7 +9,9 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	Thirst = 2 * $Timer.time_left
-	$ProgressBar.value_changed(Thirst)
+	$ProgressBar.value = Thirst
+	
+	print($Timer.time_left)
 
 func _on_timer_timeout() -> void:
 	print("Timer Stop")
