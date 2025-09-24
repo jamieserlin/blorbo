@@ -14,7 +14,7 @@ border_width_top = 3
 border_width_bottom = 3
 border_color = Color(0.858824, 0.968627, 0.980392, 0.901961)
 
-[node name="Control" type="Control"]
+[node name="ThirstBar" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
