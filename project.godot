@@ -39,6 +39,8 @@ audio_manager=""
 dissolve=""
 enviro_1=""
 enviro_2=""
+player=""
+hippo_dialogue=""
 
 [input]
 

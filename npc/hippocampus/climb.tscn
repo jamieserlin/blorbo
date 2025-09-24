@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://3m2ib2is0d45"]
+
+[ext_resource type="Script" uid="uid://cyk7sih4pc1uq" path="res://npc/hippocampus/climb.gd" id="1_im62d"]
+[ext_resource type="PackedScene" uid="uid://rh8xw8b36ch4" path="res://nodes/hippocampus.tscn" id="2_im62d"]
+[ext_resource type="PackedScene" uid="uid://cxfl5qmwj7sqw" path="res://models/homemade_usable/chain.tscn" id="3_y6prc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6pwkp"]
+radius = 1.0
+
+[node name="Hippocampus" type="Node3D"]
+script = ExtResource("1_im62d")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_6pwkp")
+
+[node name="Sprite" parent="." instance=ExtResource("2_im62d")]
+billboard = 1
+
+[node name="chain" parent="." instance=ExtResource("3_y6prc")]
+
+[connection signal="body_shape_entered" from="Area3D" to="." method="_on_area_3d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area3D" to="." method="_on_area_3d_body_shape_exited"]

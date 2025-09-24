@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cjrmwmirigrnd"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_oy10k"]
+[ext_resource type="Texture2D" uid="uid://b1hon0k8tuvc7" path="res://j-imports/wall_cobblestone_1024px_1.png" id="2_3e20s"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_oy10k")
+shader_parameter/albedo = ExtResource("2_3e20s")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0

@@ -18,7 +18,7 @@ animations = [{
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3mo4v"]
 
-[node name="j-Player" type="CharacterBody3D"]
+[node name="j-Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_7un63")
 
 [node name="Node3D" type="Node3D" parent="."]
@@ -28,7 +28,7 @@ transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 1, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_78scn")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_me10o")
 
