@@ -11,8 +11,11 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Interact") && in_body:
-		pass
+	if Input.is_action_pressed("Jump") && in_body:
+		player_body.global_position.y += 5.0 * delta
+	if in_body && !Input.is_action_pressed("Jump"):
+		player_body.velocity.y = 0
+		player_body.global_position.y = player_body.global_position.y
 	pass
 
 

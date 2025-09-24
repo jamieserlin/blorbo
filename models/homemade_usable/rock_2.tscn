@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://ee3meepfmhfk"]
+[gd_scene load_steps=6 format=4 uid="uid://ee3meepfmhfk"]
 
 [ext_resource type="Material" uid="uid://btxd5pns5qjq8" path="res://materials/rock.tres" id="1_scmkl"]
 
@@ -36,9 +36,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yfu1u")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_scmkl"]
+
 [node name="rock2" type="Node3D"]
 
 [node name="rock_n1" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_scmkl")
 mesh = SubResource("ArrayMesh_mn78b")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rock_n1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rock_n1/StaticBody3D"]
+transform = Transform3D(5.09447, 0, 0, 0, 2.01397, 0, 0, 0, -6.15274, 0, 0, 0)
+shape = SubResource("BoxShape3D_scmkl")

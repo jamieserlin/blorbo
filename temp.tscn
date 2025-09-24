@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckygru88thpbc"]
+
+[ext_resource type="PackedScene" uid="uid://dnqv2ixg66yj5" path="res://j_player.tscn" id="1_h2clf"]
+[ext_resource type="PackedScene" uid="uid://dxtiug36bo7y" path="res://nodes/e-audio_manager.tscn" id="2_q51th"]
+[ext_resource type="PackedScene" uid="uid://voqe8fb3t7fq" path="res://nodes/scene_trans_controller.tscn" id="3_iyses"]
+[ext_resource type="PackedScene" uid="uid://3m2ib2is0d45" path="res://npc/hippocampus/climb.tscn" id="4_1nlwk"]
+[ext_resource type="PackedScene" uid="uid://ee3meepfmhfk" path="res://models/homemade_usable/rock_2.tscn" id="5_b6ebu"]
+
+[node name="temp" type="Node3D"]
+
+[node name="j-Player" parent="." instance=ExtResource("1_h2clf")]
+
+[node name="audio_manager" parent="." instance=ExtResource("2_q51th")]
+
+[node name="SceneTransController" parent="." instance=ExtResource("3_iyses")]
+
+[node name="rock2" parent="." instance=ExtResource("5_b6ebu")]
+transform = Transform3D(5.48851, 0, 0, 0, 1, 0, 0, 0, -5.0252, -0.627743, -1.98784, 0.083678)
+
+[node name="chain" parent="." instance=ExtResource("4_1nlwk")]
+transform = Transform3D(10.4495, 0, 0, 0, 33.723, 0, 0, 0, 12.481, 0, 0, 0)
