@@ -14,7 +14,6 @@
 
 [node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(42.8721, 0, 0, 0, 0.0885333, 0, 0, 0, 30.0087, 0, -1, 0)
-visible = false
 mesh = SubResource("BoxMesh_2u1vp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plane"]
