@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://yt3se5r3ffby"]
+
+[ext_resource type="PackedScene" uid="uid://b8vvtx6xtnb2o" path="res://models/homemade_new_import/cabin.glb" id="1_snyly"]
+[ext_resource type="Material" uid="uid://ho0lhcwvnfip" path="res://materials/wood.tres" id="2_un6er"]
+[ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="3_l6fhm"]
+[ext_resource type="Material" uid="uid://ccjsqyn4skg3q" path="res://materials/wood2.tres" id="3_un6er"]
+
+[node name="cabin" instance=ExtResource("1_snyly")]
+
+[node name="walls_1" parent="." index="0"]
+material_override = ExtResource("2_un6er")
+
+[node name="walls_2" parent="." index="1"]
+material_override = ExtResource("2_un6er")
+
+[node name="roof" parent="." index="2"]
+material_override = ExtResource("2_un6er")
+
+[node name="floor" parent="." index="3"]
+material_override = ExtResource("3_un6er")
+
+[node name="roof_wall" parent="." index="4"]
+material_override = ExtResource("2_un6er")
+
+[node name="chimney" parent="." index="5"]
+material_override = ExtResource("3_l6fhm")

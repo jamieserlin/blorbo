@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://lqg8ln64nlpe"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_d6fis"]
+[ext_resource type="Texture2D" uid="uid://be7gau6ryf53e" path="res://textures/cc0_level_textures/chain.png" id="2_d6fis"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_d6fis")
+shader_parameter/albedo = ExtResource("2_d6fis")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0

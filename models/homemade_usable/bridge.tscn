@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkirm4nk5xa5o"]
+
+[ext_resource type="PackedScene" uid="uid://1fucnbv0y76p" path="res://models/homemade_new_import/bridge.glb" id="1_s1luw"]
+[ext_resource type="Texture2D" uid="uid://dkdshx7t4ow4v" path="res://textures/cc0_level_textures/wood_crossed.png" id="2_e11yi"]
+[ext_resource type="Material" uid="uid://ho0lhcwvnfip" path="res://materials/wood.tres" id="3_dehgg"]
+[ext_resource type="Texture2D" uid="uid://celqidmijt7me" path="res://textures/cc0_level_textures/wall_sandstone2.png" id="4_sxcgm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjibk"]
+albedo_texture = ExtResource("2_e11yi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwglv"]
+albedo_texture = ExtResource("4_sxcgm")
+
+[node name="bridge" instance=ExtResource("1_s1luw")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xjibk")
+surface_material_override/1 = ExtResource("3_dehgg")
+surface_material_override/2 = SubResource("StandardMaterial3D_fwglv")

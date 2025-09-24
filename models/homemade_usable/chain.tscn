@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=4 uid="uid://cxfl5qmwj7sqw"]
+
+[ext_resource type="PackedScene" uid="uid://m81jfk7frfwu" path="res://models/homemade_new_import/chain.glb" id="1_yhle8"]
+[ext_resource type="Material" uid="uid://lqg8ln64nlpe" path="res://materials/chains.tres" id="2_u1dqq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7t145"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3n1y0"]
+_surfaces = [{
+"aabb": AABB(-1, -4.37114e-07, -11, 2, 1e-05, 12),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAwC///AAD//7YG/38AAP//MAv//wAAAAC2Bv9/AAD//wAAAAAAAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t377q"]
+resource_name = "chain_Plane"
+_surfaces = [{
+"aabb": AABB(-1, -4.37114e-07, -11, 2, 1e-05, 12),
+"attribute_data": PackedByteArray("AAD//6oq/3+qKv//AAD/f6oqAAAAAAAA"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQA"),
+"material": SubResource("StandardMaterial3D_7t145"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAwC////7///7YG/3//v///MAv///+/AAC2Bv9//7///wAAAAD/vwAAAAAAAP+/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3n1y0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hubcf"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o73o5"]
+_surfaces = [{
+"aabb": AABB(-11, 0, -1, 12, 1e-05, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/3+7B///AAD//wAAAAAAAP//AAD//wAA/3+7BwAAAAAAAFMTAAAAAAAAUxP//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f5led"]
+resource_name = "chain_Plane_001"
+_surfaces = [{
+"aabb": AABB(-11, 0, -1, 12, 1e-05, 2),
+"attribute_data": PackedByteArray("AAD/f6oq//8AAP//qir/f6oqAAAAAAAA"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQA"),
+"material": SubResource("StandardMaterial3D_hubcf"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/3+7B///VNX//wAAAABU1f//AAD//1TV/3+7BwAAVNUAAFMTAABU1QAAUxP//1TVVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o73o5")
+
+[node name="chain" instance=ExtResource("1_yhle8")]
+
+[node name="chain_g1" parent="." index="0"]
+material_override = ExtResource("2_u1dqq")
+
+[node name="chain_g1_2" parent="." index="1"]
+material_override = ExtResource("2_u1dqq")
+
+[node name="chain_g1" type="MeshInstance3D" parent="chain_g1_2" index="0"]
+transform = Transform3D(4.37114e-08, -4.37114e-08, -1, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 4.37114e-08, -11, 0, 0)
+material_override = ExtResource("2_u1dqq")
+mesh = SubResource("ArrayMesh_t377q")
+skeleton = NodePath("")
+
+[node name="chain_g1_2" type="MeshInstance3D" parent="chain_g1_2" index="1"]
+transform = Transform3D(-1, 4.37114e-08, 0, -4.37114e-08, -1, 0, 0, 0, -1, -11, 0, 0)
+material_override = ExtResource("2_u1dqq")
+mesh = SubResource("ArrayMesh_f5led")
+skeleton = NodePath("")

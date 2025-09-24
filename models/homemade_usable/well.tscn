@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddpqdbdw4xe4s"]
+
+[ext_resource type="PackedScene" uid="uid://dsvq8kt5ho8qh" path="res://models/homemade_new_import/well.glb" id="1_4v0xf"]
+[ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="2_4u822"]
+[ext_resource type="Material" uid="uid://b0sb20gx1f3s2" path="res://materials/rock_2.tres" id="3_ob1rf"]
+[ext_resource type="Material" uid="uid://ccjsqyn4skg3q" path="res://materials/wood2.tres" id="4_bdr5n"]
+
+[node name="well" instance=ExtResource("1_4v0xf")]
+
+[node name="well" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_4u822")
+surface_material_override/1 = ExtResource("3_ob1rf")
+surface_material_override/2 = ExtResource("4_bdr5n")

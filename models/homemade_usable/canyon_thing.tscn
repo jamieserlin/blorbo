@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1coaybecs5gs"]
+
+[ext_resource type="PackedScene" uid="uid://bp1onadeg7a3n" path="res://models/homemade_new_import/canyon_thing.glb" id="1_gktcg"]
+[ext_resource type="Material" uid="uid://b0sb20gx1f3s2" path="res://materials/rock_2.tres" id="2_ditm6"]
+
+[node name="canyon_thing" instance=ExtResource("1_gktcg")]
+
+[node name="canyon_thing" parent="." index="0"]
+material_override = ExtResource("2_ditm6")

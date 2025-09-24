@@ -1,10 +1,12 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://btxd5pns5qjq8"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://btxd5pns5qjq8"]
 
 [ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_xcelk"]
+[ext_resource type="Texture2D" uid="uid://dhse617dg6nfq" path="res://textures/cc0_level_textures/rendered_stained1.png" id="2_p1hii"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_xcelk")
+shader_parameter/albedo = ExtResource("2_p1hii")
 shader_parameter/jitter = 0.5
 shader_parameter/jitter_z_coordinate = true
 shader_parameter/jitter_depth_independent = true
