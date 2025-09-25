@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnqv2ixg66yj5"]
+[gd_scene load_steps=7 format=3 uid="uid://dnqv2ixg66yj5"]
 
 [ext_resource type="Script" uid="uid://2i14svqtptnj" path="res://j_player.gd" id="1_7un63"]
 [ext_resource type="Texture2D" uid="uid://wu333fj0a3ml" path="res://sprites/player/borbi.png" id="2_7un63"]
+[ext_resource type="PackedScene" uid="uid://b6lpm6we5ac2m" path="res://nodes/dropshadow.tscn" id="3_3mo4v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_78scn"]
 animations = [{
@@ -24,8 +25,9 @@ script = ExtResource("1_7un63")
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D"]
-transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 0.718798, 0)
 billboard = 1
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_78scn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["player"]]
@@ -43,3 +45,6 @@ spring_length = 5.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraHolder/SpringArm3D"]
 unique_name_in_owner = true
+
+[node name="dropshadow" parent="." instance=ExtResource("3_3mo4v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.972201, 0)

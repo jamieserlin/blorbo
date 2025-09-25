@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6lpm6we5ac2m"]
+
+[ext_resource type="Script" uid="uid://cbouwb0hdelvk" path="res://dropshadow.gd" id="1_qhk6i"]
+[ext_resource type="Texture2D" uid="uid://bvq63xmnb2bwv" path="res://textures/dropshadow.png" id="2_pjuyq"]
+
+[node name="dropshadow" type="Node3D"]
+script = ExtResource("1_qhk6i")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="Decal" type="Decal" parent="."]
+texture_albedo = ExtResource("2_pjuyq")
