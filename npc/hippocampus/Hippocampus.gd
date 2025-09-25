@@ -24,6 +24,9 @@ func _process(delta: float) -> void:
 			add_child(new_enemy)
 			balloon = get_tree().get_first_node_in_group("hippo_dialogue")
 			if balloon != null:
+				var player = get_tree().get_first_node_in_group("player")
+				if player != null:
+					player.velocity = Vector3(0,0,0)
 				started = true
 				balloon.start(resource, dialogue_start)
 	pass
