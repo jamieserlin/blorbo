@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bcf03lfb05od8"
+path="res://.godot/imported/foggy.dialogue-9e365bc0ff69fd5c802d56e19b4a1f25.tres"
+
+[deps]
+
+source_file="res://npc/foggy/foggy.dialogue"
+dest_files=["res://.godot/imported/foggy.dialogue-9e365bc0ff69fd5c802d56e19b4a1f25.tres"]
+
+[params]
+
+defaults=true
