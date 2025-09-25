@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://beshbtvk2afjy"]
+[gd_scene load_steps=3 format=3 uid="uid://beshbtvk2afjy"]
 
 [ext_resource type="PackedScene" uid="uid://dqi3flgdf473w" path="res://j-imports/low_poly_grey_boulder.glb" id="1_ugccr"]
+[ext_resource type="Material" uid="uid://bhgru3dauvbjl" path="res://j-imports/CliffFace.tres" id="2_n8xpa"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_ugccr")]
+
+[node name="Rock lp_001_Rock Cave Wall_004_0" parent="Sketchfab_model/Grey Boulder_fbx/RootNode/Rock lp_001" index="0"]
+material_override = ExtResource("2_n8xpa")
