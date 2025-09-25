@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export_range(0.0,1.0) var mouse_sensitivity := 0.25
 @onready var _camera_holder: Node3D = %CameraHolder
 @onready var _camera: Camera3D = %Camera3D
-
+var in_dialogue
 ##Movement References
 @export_group("Movement")
 @export var move_speed := 8.0
@@ -34,10 +34,7 @@ func _input(event:InputEvent) -> void:
 var _camera_input_direction := Vector2.ZERO
 func _unhandled_input(event: InputEvent) -> void:
 	
-	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 	
-	is_starting_jump = Input.is_action_just_pressed("Jump")
-	is_starting_dive = Input.is_action_just_pressed("RightClick")
 	
 	var is_camera_motion := (
 		event is InputEventMouseMotion and 
@@ -51,6 +48,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 
 func _physics_process(delta: float) -> void:
+	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
+	
+	is_starting_jump = Input.is_action_just_pressed("Jump")
+	is_starting_dive = Input.is_action_just_pressed("RightClick")
 	##CAMERA
 	_camera_holder.rotation.x += _camera_input_direction.y * delta
 	## _camera_holder.rotation.x = clamp(_camera_holder.rotation.x, -PI /6.0, PI/3.0)

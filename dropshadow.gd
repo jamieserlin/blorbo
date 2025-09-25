@@ -5,5 +5,5 @@ extends Node3D
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if raycast.is_colliding():
-		decal.global_position.y = raycast.get_collider().global_position.y
+		decal.global_position.y = raycast.get_collider().global_position.y + 0.25
 	pass
