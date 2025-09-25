@@ -26,7 +26,7 @@ script = ExtResource("1_7un63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D"]
 transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 0.718798, 0)
-billboard = 1
+billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_78scn")
 
