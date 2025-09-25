@@ -106,6 +106,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i5qic")
 text = "Quit
 "
 
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5qic")
+text = "Credits"
+
 [node name="GameTitle" type="Label" parent="."]
 visible = false
 layout_mode = 1
@@ -126,6 +136,7 @@ OF DOOOOOOOOOOOOMMMM"
 horizontal_alignment = 1
 
 [node name="OptionsMenu" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -233,10 +244,57 @@ offset_bottom = 193.0
 text = "Fullscreen"
 script = ExtResource("4_12kdf")
 
+[node name="CreditsMenu" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 182.0
+offset_right = 748.0
+offset_bottom = 496.0
+
+[node name="Label" type="Label" parent="CreditsMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.5
+offset_right = 27.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Credits"
+
+[node name="Label2" type="Label" parent="CreditsMenu"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 31.0
+offset_right = 337.0
+offset_bottom = 262.0
+text = "Developers:
+Jamie
+mlemmily
+Samual
+Fathi
+Evan
+
+Music from Kevin Macleod
+"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="CreditsMenu"]
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5qic")
+text = "Back
+"
+
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="OptionsMenu/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="value_changed" from="OptionsMenu/MusicControl" to="OptionsMenu/MusicControl" method="_on_value_changed"]
 [connection signal="value_changed" from="OptionsMenu/SFXControl" to="OptionsMenu/SFXControl" method="_on_value_changed"]
 [connection signal="toggled" from="OptionsMenu/FullscreenControl" to="OptionsMenu/FullscreenControl" method="_on_toggled"]
+[connection signal="pressed" from="CreditsMenu/BackButton" to="." method="_on_back_button_pressed"]
