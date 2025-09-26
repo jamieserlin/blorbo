@@ -41,6 +41,7 @@ enviro_1=""
 enviro_2=""
 player=""
 hippo_dialogue=""
+dry_level=""
 
 [gui]
 
