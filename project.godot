@@ -43,6 +43,7 @@ player=""
 hippo_dialogue=""
 dry_level=""
 hydration=""
+water_respawn=""
 
 [gui]
 
