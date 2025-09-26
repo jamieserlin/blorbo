@@ -42,6 +42,7 @@ enviro_2=""
 player=""
 hippo_dialogue=""
 dry_level=""
+hydration=""
 
 [gui]
 

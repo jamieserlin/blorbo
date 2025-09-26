@@ -124,6 +124,7 @@ theme_override_fonts/normal_font = ExtResource("2_2w3bu")
 theme_override_font_sizes/normal_font_size = 38
 text = "Dialogue..."
 horizontal_alignment = 1
+seconds_per_step = 0.04
 seconds_per_pause_step = 0.01
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]

@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 				var player = get_tree().get_first_node_in_group("player")
 				if player != null:
 					player.velocity = Vector3(0,0,0)
-				player.in_dialogue = true;
+				player.in_dialogue = true
 				started = true
 				balloon.start(resource, dialogue_start)
 	pass
