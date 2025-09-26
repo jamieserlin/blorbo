@@ -28,16 +28,26 @@ transform = Transform3D(1, -0.000698134, -2.87693e-08, 2.87922e-08, 3.28891e-08,
 
 [node name="j-Player" parent="." instance=ExtResource("1_2r2oh")]
 
-[node name="coler" parent="." instance=ExtResource("2_t3oci")]
-transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -1.34844, -0.394206, 2.62141)
-
-[node name="coler area" type="Area3D" parent="coler"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.822214, 0, 0)
-script = ExtResource("3_51pfr")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="coler/coler area"]
-shape = SubResource("CylinderShape3D_51pfr")
-
 [node name="audio_manager" parent="." instance=ExtResource("3_byi7g")]
 
 [node name="ThirstBar" parent="." instance=ExtResource("4_7on7e")]
+
+[node name="coler area" type="Area3D" parent="."]
+transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -0.206039, -0.394206, 2.62141)
+script = ExtResource("3_51pfr")
+
+[node name="coler" parent="coler area" instance=ExtResource("2_t3oci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area"]
+shape = SubResource("CylinderShape3D_51pfr")
+
+[node name="coler area2" type="Area3D" parent="."]
+transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -0.206039, -0.394206, 2.62141)
+script = ExtResource("3_51pfr")
+
+[node name="coler" parent="coler area2" instance=ExtResource("2_t3oci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area2"]
+shape = SubResource("CylinderShape3D_51pfr")
