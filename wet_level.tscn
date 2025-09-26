@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://3m2ib2is0d45" path="res://npc/hippocampus/climb.tscn" id="1_8muuy"]
 [ext_resource type="PackedScene" uid="uid://dnqv2ixg66yj5" path="res://j_player.tscn" id="2_k5xyv"]
-[ext_resource type="PackedScene" uid="uid://drsi2tl7dnry" path="res://models/homemade_usable/winning_well.tscn" id="3_4q8d1"]
+[ext_resource type="PackedScene" path="res://models/homemade_usable/winning_well.tscn" id="3_4q8d1"]
 [ext_resource type="PackedScene" uid="uid://voqe8fb3t7fq" path="res://nodes/scene_trans_controller.tscn" id="4_k48m4"]
 [ext_resource type="PackedScene" uid="uid://d0ch80625blkn" path="res://nodes/geometry/cave.tscn" id="5_dnr1x"]
 [ext_resource type="Material" uid="uid://cjrmwmirigrnd" path="res://j-imports/stonewall.tres" id="6_c2gic"]
@@ -908,7 +908,7 @@ transform = Transform3D(-0.282373, 0.529964, -0.799627, -0.712993, 0.441724, 0.5
 shadow_enabled = true
 
 [node name="j-Player" parent="." instance=ExtResource("2_k5xyv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -171.92, 4.58921, -2.178)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 198.237, 1.24447, -3.92386)
 
 [node name="well2" parent="." instance=ExtResource("3_4q8d1")]
 transform = Transform3D(5.62884, 0, 0, 0, 3.93762, 0, 0, 0, 5.62884, 216.232, 1.57905, -12.0826)
