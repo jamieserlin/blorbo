@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://e83cio3uo1oq"]
+[gd_scene load_steps=10 format=3 uid="uid://e83cio3uo1oq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_rdbsj"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_cbonb"]
+[ext_resource type="FontFile" uid="uid://cnrneghp7qnrk" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="2_va1wu"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_va1wu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -106,6 +107,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_va1wu")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -115,6 +117,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_va1wu")
 theme_override_font_sizes/normal_font_size = 24
 text = "Dialogue..."
 seconds_per_pause_step = 0.01

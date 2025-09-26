@@ -42,6 +42,10 @@ enviro_2=""
 player=""
 hippo_dialogue=""
 
+[gui]
+
+theme/custom_font="uid://cnrneghp7qnrk"
+
 [input]
 
 ui_accept={
