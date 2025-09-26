@@ -5,6 +5,7 @@ var MinThirst = 0
 
 func _ready() -> void:
 	$Timer.start()
+	get_tree().root.set_meta("hydration", self)
 	print("Initalised")
 	
 func _process(delta: float) -> void:
@@ -16,9 +17,15 @@ func _on_timer_timeout() -> void:
 	print("Timer Stop")
 	
 func refill() -> void:
+	var new_time = $Timer.time_left
 	if $Timer.time_left >= 37:
-		$Timer.time_left = 50
+		new_time = 50
+		$Timer.stop()
+		$Timer.start(new_time)
 	else:
-		$Timer.time_left += 25
+		new_time += 25
+		$Timer.stop()
+		$Timer.start(new_time)
 	print("Time added")
+	
 	
