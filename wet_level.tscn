@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dr0yt1sfnygas" path="res://j-imports/low_poly_grey_boulder_1.png" id="8_ogsuj"]
 [ext_resource type="Texture2D" uid="uid://c06d8rtv8lcm" path="res://j-imports/low_poly_grey_boulder_2.png" id="9_0gkxd"]
 [ext_resource type="PackedScene" uid="uid://bebsg65ie6du0" path="res://nodes/water.tscn" id="10_5w83y"]
-[ext_resource type="PackedScene" uid="uid://bjpgh8llqank" path="res://npc/foggy/wet_foggy.tscn" id="10_8muuy"]
+[ext_resource type="PackedScene" path="res://npc/foggy/wet_foggy.tscn" id="10_8muuy"]
 [ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="13_57hgt"]
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="14_2wgxe"]
 [ext_resource type="Material" uid="uid://bapjb4pmgyvne" path="res://materials/wood3.tres" id="15_neid2"]
@@ -20,14 +20,14 @@
 [ext_resource type="Shader" uid="uid://cqm32v15dbket" path="res://addons/csg_terrain/csg_terrain_shader.gdshader" id="20_hccxj"]
 [ext_resource type="Script" uid="uid://ii6iomwi3j21" path="res://addons/csg_terrain/csg_terrain.gd" id="21_p0dug"]
 [ext_resource type="Script" uid="uid://chd7im1g4agp0" path="res://addons/csg_terrain/csg_terrain_path.gd" id="22_xrryk"]
-[ext_resource type="PackedScene" uid="uid://bvwsmbjfq21mv" path="res://npc/hippocampus/happycamps.tscn" id="23_uya8j"]
+[ext_resource type="PackedScene" path="res://npc/hippocampus/happycamps.tscn" id="23_uya8j"]
 [ext_resource type="PackedScene" uid="uid://kb2iy4ol0i1m" path="res://nodes/bridge_2.tscn" id="23_v71y5"]
 [ext_resource type="PackedScene" uid="uid://c1dmh0unjexip" path="res://j-imports/bloxy_cola.glb" id="25_4yjtq"]
 [ext_resource type="PackedScene" uid="uid://yt3se5r3ffby" path="res://models/homemade_usable/cabin.tscn" id="27_3k3kc"]
 [ext_resource type="PackedScene" uid="uid://cuhrrsuppieji" path="res://models/homemade_usable/tree_2.tscn" id="28_1jg21"]
-[ext_resource type="PackedScene" uid="uid://drh7tb7mnix3" path="res://npc/hippocampus/wet_big_paws.tscn" id="28_7r8qi"]
+[ext_resource type="PackedScene" path="res://npc/hippocampus/wet_big_paws.tscn" id="28_7r8qi"]
 [ext_resource type="PackedScene" uid="uid://bdujkgk4tysu6" path="res://models/homemade_usable/tree_1.tscn" id="29_3hmaw"]
-[ext_resource type="PackedScene" uid="uid://flasieslch1p" path="res://npc/hippocampus/face.tscn" id="30_01oee"]
+[ext_resource type="PackedScene" path="res://npc/hippocampus/face.tscn" id="30_01oee"]
 [ext_resource type="PackedScene" uid="uid://dsaiisr1elot1" path="res://models/homemade_usable/tree_3.tscn" id="32_8muuy"]
 [ext_resource type="PackedScene" uid="uid://dvkw7bqu7l5gv" path="res://models/homemade_usable/rockpool.tscn" id="32_13f6y"]
 
@@ -2032,7 +2032,7 @@ transform = Transform3D(4.90162, 0, 0, 0, 4.90162, 0, 0, 0, 4.90162, 211.732, 4.
 transform = Transform3D(28.5136, 0, 6.97302, 0, 29.3539, 0, -6.97302, 0, 28.5136, -61.0811, 12.6822, -65.0471)
 
 [node name="wet_big_paws" parent="face2" instance=ExtResource("28_7r8qi")]
-transform = Transform3D(0.0469653, 0, -9.31323e-10, 0, 0.0469653, 0, 9.31323e-10, 0, 0.0469653, -3.32246, -0.325002, 1.61076)
+transform = Transform3D(0.0469653, 0, -9.31323e-10, 0, 0.0469653, 0, 9.31323e-10, 0, 0.0469653, -1.88739, -0.325002, 1.7211)
 
 [node name="rockpool" parent="." instance=ExtResource("32_13f6y")]
 transform = Transform3D(12.9306, -0.0489639, 0, 0.195638, 3.23483, -0.255048, 0.00408095, 0.0674777, 12.2268, 215.875, 0.812157, -10.699)
