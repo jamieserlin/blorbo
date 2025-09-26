@@ -139,7 +139,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://npc/hippocampus/hippocampus.dialogue", "res://npc/foggy/foggy.dialogue", "res://npc/pawsboy/bigpaws.dialogue", "res://npc/face/face.dialogue", "res://npc/happycampus/happycampus.dialogue", "res://npc/pawsboy/wet_bigpaws.dialogue", "res://npc/facething/facething.dialogue")
+locale/translations_pot_files=PackedStringArray("res://npc/hippocampus/hippocampus.dialogue", "res://npc/foggy/foggy.dialogue", "res://npc/pawsboy/bigpaws.dialogue", "res://npc/face/face.dialogue", "res://npc/happycampus/happycampus.dialogue", "res://npc/pawsboy/wet_bigpaws.dialogue")
 
 [rendering]
 

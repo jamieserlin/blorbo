@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://cuhrrsuppieji"]
 
 [ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="1_b7w4y"]
-[ext_resource type="Material" uid="uid://8rlh8ywhwq3n" path="res://materials/dissolve.tres" id="2_qrj41"]
+[ext_resource type="Material" path="res://materials/dissolve.tres" id="2_qrj41"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvm3b"]
 

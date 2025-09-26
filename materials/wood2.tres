@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ccjsqyn4skg3q"]
 
 [ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_seov3"]
-[ext_resource type="Texture2D" uid="uid://dh0103urcva1r" path="res://textures/cc0_level_textures/wood_overlapping_planks7.png" id="2_xa7ar"]
+[ext_resource type="Texture2D" uid="uid://rmjxitly6vrt" path="res://j-imports/leafs.jpg" id="2_xa7ar"]
 
 [resource]
 render_priority = 0

@@ -1,7 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://8rlh8ywhwq3n"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ccmvmd7jky5mh"]
 
 [ext_resource type="Shader" uid="uid://bdlef4py0xpk5" path="res://shaders/dissolve.gdshader" id="1_13uwk"]
-[ext_resource type="Texture2D" uid="uid://c40c08qhjoay" path="res://textures/cc0_level_textures/rendered_crazy_groove.png" id="2_wjd28"]
+[ext_resource type="Texture2D" uid="uid://rmjxitly6vrt" path="res://j-imports/leafs.jpg" id="2_wjd28"]
 
 [resource]
 render_priority = 0
