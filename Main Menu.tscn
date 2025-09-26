@@ -180,6 +180,10 @@ offset_right = 240.5
 offset_bottom = 158.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_left = NodePath("BackButton")
+focus_neighbor_top = NodePath("BackButton")
+focus_neighbor_right = NodePath("BackButton")
+focus_neighbor_bottom = NodePath("BackButton")
 
 [node name="OptionMenuText" type="Label" parent="OptionsMenu"]
 layout_mode = 1
@@ -294,6 +298,10 @@ offset_right = 301.0
 offset_bottom = 133.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_left = NodePath("BackButton")
+focus_neighbor_top = NodePath("BackButton")
+focus_neighbor_right = NodePath("BackButton")
+focus_neighbor_bottom = NodePath("BackButton")
 
 [node name="Label" type="Label" parent="CreditsMenu"]
 layout_mode = 1

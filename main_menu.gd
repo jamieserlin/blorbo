@@ -30,6 +30,7 @@ func _on_start_game_button_pressed() -> void:
 
 
 func _on_options_button_pressed() -> void:
+	$OptionsMenu/BackButton.grab_focus()
 	print("Options Pressed")
 	toggle_menu_visability(2)
 	
@@ -74,8 +75,10 @@ func toggle_menu_visability(screen) -> void:
 
 
 func _on_back_button_pressed() -> void:
+	$VBoxContainer/StartGameButton.grab_focus()
 	toggle_menu_visability(1)
 
 
 func _on_credits_button_pressed() -> void:
+	$CreditsMenu/BackButton.grab_focus()
 	toggle_menu_visability(3)
