@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="1_axyym"]
 [ext_resource type="PackedScene" uid="uid://dgkdd77jrqt3i" path="res://hydration.tscn" id="1_xl7v0"]
 [ext_resource type="PackedScene" uid="uid://3m2ib2is0d45" path="res://npc/hippocampus/climb.tscn" id="1_yykrs"]
-[ext_resource type="PackedScene" uid="uid://drsi2tl7dnry" path="res://models/homemade_usable/winning_well.tscn" id="3_xl7v0"]
+[ext_resource type="PackedScene" path="res://models/homemade_usable/winning_well.tscn" id="3_xl7v0"]
 [ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="5_71qt0"]
 [ext_resource type="PackedScene" uid="uid://dlxm3avha5lh4" path="res://npc/foggy/Foggy.tscn" id="5_hl8kq"]
 [ext_resource type="Script" uid="uid://bb2yrf3bebnkj" path="res://npc/foggy/Foggy.gd" id="6_hl8kq"]
@@ -29,8 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://c1dmh0unjexip" path="res://j-imports/bloxy_cola.glb" id="20_hl8kq"]
 [ext_resource type="PackedScene" uid="uid://cuhrrsuppieji" path="res://models/homemade_usable/tree_2.tscn" id="20_yykrs"]
 [ext_resource type="PackedScene" uid="uid://bdujkgk4tysu6" path="res://models/homemade_usable/tree_1.tscn" id="21_yykrs"]
-[ext_resource type="PackedScene" uid="uid://flasieslch1p" path="res://npc/hippocampus/face.tscn" id="24_01fgh"]
-[ext_resource type="PackedScene" uid="uid://b4vo5upolp42q" path="res://npc/hippocampus/big_paws.tscn" id="24_2tceu"]
+[ext_resource type="PackedScene" path="res://npc/hippocampus/face.tscn" id="24_01fgh"]
+[ext_resource type="PackedScene" path="res://npc/hippocampus/big_paws.tscn" id="24_2tceu"]
 [ext_resource type="PackedScene" uid="uid://dvkw7bqu7l5gv" path="res://models/homemade_usable/rockpool.tscn" id="25_2tceu"]
 [ext_resource type="Script" uid="uid://cn3ufil3gxstq" path="res://j-imports/bloxy_cola.gd" id="33_5w48b"]
 
@@ -1921,6 +1921,7 @@ transform = Transform3D(8.83271, 0, 8.53077, 0, 10.7691, 0, -4.80216, 0, 15.6908
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGTerrain/bridge2"]
 transform = Transform3D(0.999977, 0, 0, 0, 1, 0, 4.17233e-07, 0, 1, 0.0255136, -0.0525693, -0.0404063)
+use_collision = true
 size = Vector3(1.63794, 0.0262451, 5.8562)
 
 [node name="Hippocampus" parent="." instance=ExtResource("17_f5gtj")]
