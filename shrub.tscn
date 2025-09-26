@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=4 uid="uid://br2gyhsx6ocno"]
+
+[ext_resource type="Texture2D" uid="uid://bdabxwkpccsc" path="res://textures/shrub.png" id="1_y46j8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bkhf"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.868985, 0.868985, 0.868985, 1)
+albedo_texture = ExtResource("1_y46j8")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4k3e"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yplyi"]
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAAAAAAAP//AAD//wAAAAD//wAAAAD///////8AAAAAAAAAAAAA/////wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_djqgh"]
+resource_name = "shrub_Plane"
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAAAAAAAP////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_v4k3e"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//////cT//wAAAAD9xP//AAD///3EAAD//wAA/cT///////9aFAAAAAAAAFoU/////wAAWhQAAAAA//9aFEvJpWRLyaVkS8mlZEvJpWTfa++132vvtd9r77Xfa++1")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yplyi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_it88n"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.864675, 0.864675, 0.864675, 1)
+albedo_texture = ExtResource("1_y46j8")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yretm"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ruvah"]
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAAAAAAAP//AAD//wAAAAD//wAAAAD///////8AAAAAAAAAAAAA/////wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a0376"]
+resource_name = "shrub_Plane_001"
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAAAAAAAP////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_yretm"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//////cT//wAAAAD9xP//AAD///3EAAD//wAA/cT///////9aFAAAAAAAAFoU/////wAAWhQAAAAA//9aFEvJpWRLyaVkS8mlZEvJpWTfa++132vvtd9r77Xfa++1")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ruvah")
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="shrub_p1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_5bkhf")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_it88n")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")

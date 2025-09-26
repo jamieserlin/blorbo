@@ -1,6 +1,7 @@
 extends Control
 var Thirst = 300
 var MaxTime
+var end_screen = preload("res://youdied.tscn")
 @onready var timer = $Timer
 var can_remove = true
 
@@ -14,8 +15,13 @@ func _process(delta: float) -> void:
 	if can_remove:
 		Thirst = 2 * timer.time_left
 		$ProgressBar.value = Thirst
+	if Thirst <= 0:
+		var new_lvl = end_screen.instantiate()
+		get_tree().root.add_child(new_lvl)
 
 func _on_timer_timeout() -> void:
+	var new_lvl = end_screen.instantiate()
+	get_tree().root.add_child(new_lvl)
 	print("Timer Stop")
 	
 func refill() -> void:

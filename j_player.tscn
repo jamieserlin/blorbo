@@ -1,19 +1,79 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnqv2ixg66yj5"]
+[gd_scene load_steps=16 format=3 uid="uid://dnqv2ixg66yj5"]
 
 [ext_resource type="Script" uid="uid://2i14svqtptnj" path="res://j_player.gd" id="1_7un63"]
 [ext_resource type="Texture2D" uid="uid://cbs700cbxwt2q" path="res://sprites/player/blorbo_walk.png" id="2_tx81v"]
 [ext_resource type="PackedScene" uid="uid://b6lpm6we5ac2m" path="res://nodes/dropshadow.tscn" id="3_3mo4v"]
+[ext_resource type="Texture2D" uid="uid://c4e7vwj5d8wtg" path="res://sprites/player/blorbo_jump.png" id="3_cw1ft"]
 [ext_resource type="PackedScene" uid="uid://dgkdd77jrqt3i" path="res://hydration.tscn" id="4_tx81v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgq0j"]
+atlas = ExtResource("2_tx81v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5agpl"]
+atlas = ExtResource("3_cw1ft")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttfhm"]
+atlas = ExtResource("3_cw1ft")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlyxy"]
+atlas = ExtResource("3_cw1ft")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql8ed"]
+atlas = ExtResource("3_cw1ft")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aql1w"]
+atlas = ExtResource("2_tx81v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11xad"]
+atlas = ExtResource("2_tx81v")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_78scn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tx81v")
+"texture": SubResource("AtlasTexture_sgq0j")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5agpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttfhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlyxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql8ed")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aql1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgq0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11xad")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_me10o"]
@@ -30,21 +90,8 @@ transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 0.718798, 0)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_78scn")
-animation = &""
-
-[node name="blorbo_walk" type="AnimatedSprite3D" parent="Node3D"]
-transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 0.718798, 0)
-billboard = 2
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_78scn")
-animation = &"new_animation"
-
-[node name="blorbo_jump" type="AnimatedSprite3D" parent="Node3D"]
-transform = Transform3D(6.30039, 0, 0, 0, 6.30039, 0, 0, 0, 1, 0, 0.718798, 0)
-billboard = 2
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_78scn")
-animation = &""
+animation = &"jump"
+frame_progress = 0.0338017
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

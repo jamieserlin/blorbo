@@ -5,6 +5,9 @@ const my_scene = preload("res://npc/wet_big_paws_dialogue.tscn")
 var in_body = false
 var balloon
 var started = false
+var final_talk = false
+var end_screen = preload("res://thankyouforplaying.tscn")
+
 #use the example balloon to create an interaction
 #nready var balloon = $ExampleBalloon
 
@@ -30,6 +33,11 @@ func _process(delta: float) -> void:
 				player.in_dialogue = true;
 				started = true
 				balloon.start(resource, dialogue_start)
+				final_talk = true
+	if balloon == null && final_talk:
+		var new_lvl = end_screen.instantiate()
+		get_tree().root.add_child(new_lvl)
+
 	pass
 
 

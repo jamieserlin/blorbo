@@ -12,6 +12,9 @@ var menu_down = preload("res://sounds/menu/menu_down.wav")
 var menu_up = preload("res://sounds/menu/menu_up.wav")
 var menu_select = preload("res://sounds/menu/sfx_menu_select5.wav")
 
+var sip = preload("res://sounds/player_sfx/sip.wav")
+var trans = preload("res://sounds/player_sfx/sfx_sounds_powerup16.wav")
+
 #Music sounds
 var music_1 = preload("res://sounds/music/pingus/snowlevel.mp3")
 var music_2 = preload("res://sounds/music/pingus/basiclevel.mp3")
@@ -47,6 +50,12 @@ func menu_select_play():
 	ui_sfx.stream = menu_select
 	ui_sfx.play()
 
+func cola_sfx():
+	player_sfx.stream = sip
+	player_sfx.play()
+func transition():
+	player_sfx.stream = trans
+	player_sfx.play()
 #player funcs
 func player_jump():
 	player_sfx.stream = jump_sfx

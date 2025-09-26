@@ -15,6 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") && in_body:
+			get_tree().get_first_node_in_group("audio_manager").transition()
 			var new_lvl = new_level.instantiate()
 			get_tree().root.add_child(new_lvl)
 			get_tree().get_first_node_in_group("dry_level").queue_free()

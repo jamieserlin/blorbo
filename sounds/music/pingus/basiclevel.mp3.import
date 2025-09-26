@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/basiclevel.mp3-4f255c6d686ad3664aa6f7286539e9
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

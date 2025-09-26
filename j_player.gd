@@ -9,6 +9,7 @@ extends CharacterBody3D
 @onready var _camera: Camera3D = %Camera3D
 @onready var coyote_time: Timer = $CoyoteTime
 
+@onready var anim_sprite = $Node3D/AnimatedSprite3D
 
 var in_dialogue
 var can_interact = false
@@ -34,12 +35,13 @@ var can_interact = false
 func _input(event:InputEvent) -> void:
 	if event.is_action_pressed("LeftClick"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("unbind"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 var _camera_input_direction := Vector2.ZERO
 func _unhandled_input(event: InputEvent) -> void:
-	
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
 	var is_camera_motion := (
 		event is InputEventMouseMotion and 
 		Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -58,12 +60,7 @@ func _physics_process(delta: float) -> void:
 	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 	
 	if !in_dialogue:
-		get_tree().get_first_node_in_group("hydration").can_remove = true
-		get_tree().get_first_node_in_group("hydration").timer.paused = false
 		is_starting_jump = Input.is_action_just_pressed("Jump")
-	if in_dialogue:
-		get_tree().get_first_node_in_group("hydration").can_remove = false
-		get_tree().get_first_node_in_group("hydration").timer.paused = true
 		
 		
 	is_starting_dive = Input.is_action_just_pressed("RightClick")
@@ -77,9 +74,6 @@ func _physics_process(delta: float) -> void:
 	
 	var was_on_floor = is_on_floor()
 	var has_jumped = false
-	
-	
-	
 	
 
 	var forward := _camera.global_basis.z
@@ -95,15 +89,22 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
 	##JUMPING
 	velocity.y = y_velocity + _gravity * delta
-	
 	if is_starting_jump and (is_on_floor() || !coyote_time.is_stopped()):
+
 		audio_manager.player_jump()
 		velocity.y += jump_impulse
 		has_jumped = true
+	if !is_on_floor():
+		#anim_sprite.stop()
+		anim_sprite.play("jump")
 		
 	##DIVING
 	if velocity.x != 0 && is_on_floor():
 		audio_manager.player_walk()
+		anim_sprite.play("walk")
+	
+	if velocity.x == 0 && is_on_floor():
+		anim_sprite.play("idle")
 	
 	if is_starting_dive and !has_dived and !is_on_floor():
 		audio_manager.player_dive()

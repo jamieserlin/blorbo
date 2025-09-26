@@ -21,6 +21,7 @@ func _on_body_entered(body: Node) -> void:
 			despawns()
 		
 func despawns() -> void:
+	get_tree().get_first_node_in_group("audio_manager").cola_sfx()
 	active = false
 	visible = false
 	respawn_timer.start(respawn_time)
