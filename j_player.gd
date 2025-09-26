@@ -58,7 +58,14 @@ func _physics_process(delta: float) -> void:
 	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 	
 	if !in_dialogue:
+		get_tree().get_first_node_in_group("hydration").can_remove = true
+		get_tree().get_first_node_in_group("hydration").timer.paused = false
 		is_starting_jump = Input.is_action_just_pressed("Jump")
+	if in_dialogue:
+		get_tree().get_first_node_in_group("hydration").can_remove = false
+		get_tree().get_first_node_in_group("hydration").timer.paused = true
+		
+		
 	is_starting_dive = Input.is_action_just_pressed("RightClick")
 	##CAMERA
 	_camera_holder.rotation.x += _camera_input_direction.y * delta
