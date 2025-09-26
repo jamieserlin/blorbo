@@ -7,6 +7,9 @@ extends CharacterBody3D
 @export_range(0.0,1.0) var mouse_sensitivity := 0.25
 @onready var _camera_holder: Node3D = %CameraHolder
 @onready var _camera: Camera3D = %Camera3D
+@onready var coyote_time: Timer = $CoyoteTime
+
+
 var in_dialogue
 ##Movement References
 @export_group("Movement")
@@ -45,7 +48,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	else:
 		_camera_input_direction = Input.get_vector("Joy_left", 
 		"Joy_right", "Joy_up", "Joy_down") * 3.5
-		
 
 func _physics_process(delta: float) -> void:
 	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
@@ -59,6 +61,13 @@ func _physics_process(delta: float) -> void:
 	_camera_input_direction = Vector2.ZERO
 	
 	##MOVEMENT
+	
+	var was_on_floor = is_on_floor()
+	var has_jumped = false
+	
+	
+	
+	
 
 	var forward := _camera.global_basis.z
 	var right := _camera.global_basis.x
@@ -74,9 +83,10 @@ func _physics_process(delta: float) -> void:
 	##JUMPING
 	velocity.y = y_velocity + _gravity * delta
 	
-	if is_starting_jump and is_on_floor():
+	if is_starting_jump and (is_on_floor() || !coyote_time.is_stopped()):
 		audio_manager.player_jump()
 		velocity.y += jump_impulse
+		has_jumped = true
 		
 	##DIVING
 	if velocity.x != 0 && is_on_floor():
@@ -91,3 +101,6 @@ func _physics_process(delta: float) -> void:
 		has_dived = false;
 		
 	move_and_slide()
+	if was_on_floor && !is_on_floor() && !has_jumped:
+		print("Coyote Time")
+		coyote_time.start()
