@@ -12,10 +12,29 @@ var menu_down = preload("res://sounds/menu/menu_down.wav")
 var menu_up = preload("res://sounds/menu/menu_up.wav")
 var menu_select = preload("res://sounds/menu/sfx_menu_select5.wav")
 
+#Music sounds
+var music_1 = preload("res://sounds/music/That Zen Moment.mp3")
+var music_2 = preload("res://sounds/music/Vibing Over Venus.mp3")
+
 
 @onready var player_sfx = $player_sfx
 @onready var ui_sfx = $ui_sfx
-var music = "$music"
+@onready var music_sfx = $music
+
+func music1_play():
+	print("Music Time!")
+	music_sfx.stream = music_1
+	music_sfx.play()
+
+func music2_play():
+	print("Music Time!")
+	music_sfx.stream = music_2
+	music_sfx.play()
+
+func _ready() -> void:
+	music2_play()
+
+
 
 #menu funcs
 func menu_up_play():

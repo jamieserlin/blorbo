@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://e3087lmnirb"]
+[gd_scene load_steps=12 format=3 uid="uid://e3087lmnirb"]
 
-[ext_resource type="Texture2D" uid="uid://1n4sb3iaqvjs" path="res://textures/Sam_MainMenuTextures/MainMenuBackgrounkd.png" id="1_5b7ti"]
 [ext_resource type="Script" uid="uid://bxpogyd6fhl4k" path="res://main_menu.gd" id="1_dvdtt"]
+[ext_resource type="Texture2D" uid="uid://sqohvspcuadv" path="res://textures/main_menu.png" id="2_12kdf"]
 [ext_resource type="Script" uid="uid://bvtlfqo067po5" path="res://audio_control.gd" id="3_i5qic"]
+[ext_resource type="FontFile" uid="uid://cnrneghp7qnrk" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="3_xwd2w"]
 [ext_resource type="Script" uid="uid://c4mrb38r1t03s" path="res://fullscreen_control.gd" id="4_12kdf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvdtt"]
-texture = ExtResource("1_5b7ti")
-modulate_color = Color(0.329158, 0.329158, 0.329158, 1)
+texture = ExtResource("2_12kdf")
+modulate_color = Color(0.847474, 0.847474, 0.847474, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b7ti"]
 
@@ -79,6 +80,7 @@ focus_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
@@ -89,6 +91,7 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
@@ -99,6 +102,7 @@ text = "Options"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
@@ -110,6 +114,7 @@ text = "Quit
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
@@ -117,22 +122,21 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i5qic")
 text = "Credits"
 
 [node name="GameTitle" type="Label" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -129.0
-offset_top = -179.0
-offset_right = 129.0
-offset_bottom = -114.0
+offset_left = -203.0
+offset_top = -216.0
+offset_right = 200.0
+offset_bottom = -143.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "GLORBO's SUPREME ADVENTURE 
-OF DOOOOOOOOOOOOMMMM"
+theme_override_fonts/font = ExtResource("3_xwd2w")
+theme_override_font_sizes/font_size = 42
+text = "Glorbo's Last Soda"
 horizontal_alignment = 1
 
 [node name="OptionsMenu" type="Panel" parent="."]
@@ -159,6 +163,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_font_sizes/font_size = 35
 text = "Options Menu"
 
@@ -166,6 +171,7 @@ text = "Options Menu"
 layout_mode = 0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
@@ -202,6 +208,7 @@ offset_top = -12.0
 offset_right = -5.5
 offset_bottom = 11.0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xwd2w")
 text = "Music"
 
 [node name="SFXControl" type="HSlider" parent="OptionsMenu"]
@@ -233,6 +240,7 @@ offset_top = -12.0
 offset_right = 2.0
 offset_bottom = 11.0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xwd2w")
 text = "SFX"
 
 [node name="FullscreenControl" type="CheckButton" parent="OptionsMenu"]
@@ -245,11 +253,19 @@ text = "Fullscreen"
 script = ExtResource("4_12kdf")
 
 [node name="CreditsMenu" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 277.0
-offset_top = 182.0
-offset_right = 748.0
-offset_bottom = 496.0
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -157.0
+offset_right = 235.5
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="CreditsMenu"]
 layout_mode = 1
@@ -260,6 +276,7 @@ offset_left = -27.5
 offset_right = 27.5
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xwd2w")
 text = "Credits"
 
 [node name="Label2" type="Label" parent="CreditsMenu"]
@@ -268,6 +285,7 @@ offset_left = 133.0
 offset_top = 31.0
 offset_right = 337.0
 offset_bottom = 262.0
+theme_override_fonts/font = ExtResource("3_xwd2w")
 text = "Developers:
 Jamie
 mlemmily
@@ -280,8 +298,10 @@ Music from Kevin Macleod
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="CreditsMenu"]
+layout_mode = 0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xwd2w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b7ti")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5b7ti")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5qic")
