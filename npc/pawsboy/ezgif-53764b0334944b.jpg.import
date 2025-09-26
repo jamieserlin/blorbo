@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q7nn01u2qt0y"
-path="res://.godot/imported/ezgif-53764b0334944b.jpg-9ae5eded0245d118fba54cf6b2665c34.ctex"
+path="res://.godot/imported/ezgif-53764b0334944b.jpg-af2f6ca417c44f8d405408c5c9668c68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://npc/bossboy/ezgif-53764b0334944b.jpg"
-dest_files=["res://.godot/imported/ezgif-53764b0334944b.jpg-9ae5eded0245d118fba54cf6b2665c34.ctex"]
+source_file="res://npc/pawsboy/ezgif-53764b0334944b.jpg"
+dest_files=["res://.godot/imported/ezgif-53764b0334944b.jpg-af2f6ca417c44f8d405408c5c9668c68.ctex"]
 
 [params]
 
