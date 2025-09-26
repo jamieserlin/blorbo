@@ -11,11 +11,13 @@ extends CharacterBody3D
 
 
 var in_dialogue
+var can_interact = false
 ##Movement References
 @export_group("Movement")
 @export var move_speed := 8.0
 @export var acceleration := 25.0
 @export var raw_input := Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
+@onready var interact_visual = $Label
 
 ##Jump References
 @export var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
@@ -38,8 +40,6 @@ func _input(event:InputEvent) -> void:
 var _camera_input_direction := Vector2.ZERO
 func _unhandled_input(event: InputEvent) -> void:
 	
-	
-	
 	var is_camera_motion := (
 		event is InputEventMouseMotion and 
 		Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -51,9 +51,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		"Joy_right", "Joy_up", "Joy_down") * 3.5
 
 func _physics_process(delta: float) -> void:
+	if can_interact:
+		interact_visual.show()
+	else:
+		interact_visual.hide()
 	raw_input = Input.get_vector("MoveLeft", "MoveRight","MoveForward", "MoveBackward")
 	
-	is_starting_jump = Input.is_action_just_pressed("Jump")
+	if !in_dialogue:
+		is_starting_jump = Input.is_action_just_pressed("Jump")
 	is_starting_dive = Input.is_action_just_pressed("RightClick")
 	##CAMERA
 	_camera_holder.rotation.x += _camera_input_direction.y * delta

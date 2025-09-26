@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 			add_child(new_enemy)
 			balloon = get_tree().get_first_node_in_group("hippo_dialogue")
 			if balloon != null:
+				var player = get_tree().get_first_node_in_group("player")
+				if player != null:
+					player.in_dialogue = true
 				balloon.start(resource, dialogue_start)
 	pass
 
@@ -37,5 +40,6 @@ func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_inde
 
 func _on_area_3d_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
+		body.in_dialogue = false
 		in_body = false
 	pass # Replace with function body.

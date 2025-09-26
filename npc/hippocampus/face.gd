@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 				var player = get_tree().get_first_node_in_group("player")
 				if player != null:
 					player.velocity = Vector3(0,0,0)
+				player.in_dialogue = true;
 				started = true
 				balloon.start(resource, dialogue_start)
 	pass
@@ -34,6 +35,7 @@ func _process(delta: float) -> void:
 
 func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
+		body.can_interact = true
 		in_body = true
 		print("FUCK")
 		
@@ -42,6 +44,8 @@ func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_inde
 
 func _on_area_3d_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
+		body.can_interact = false
+		body.in_dialogue = false
 		started = false
 		in_body = false
 	pass # Replace with function body.
