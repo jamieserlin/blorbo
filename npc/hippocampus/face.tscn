@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgdwv61kc8mhi"]
+[gd_scene load_steps=4 format=3 uid="uid://flasieslch1p"]
 
-[ext_resource type="Script" uid="uid://t51iqeg3c85r" path="res://npc/hippocampus/face.gd" id="1_5hswn"]
+[ext_resource type="Script" path="res://npc/hippocampus/face.gd" id="1_5hswn"]
 [ext_resource type="PackedScene" uid="uid://bhlq8b561q03e" path="res://j-imports/face.tscn" id="2_t0pue"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6pwkp"]
