@@ -1,5 +1,5 @@
 extends Control
-var Thirst = 300
+var Thirst = 200
 var MaxTime
 var end_screen = preload("res://youdied.tscn")
 @onready var timer = $Timer
@@ -20,8 +20,6 @@ func _process(delta: float) -> void:
 		get_tree().root.add_child(new_lvl)
 
 func _on_timer_timeout() -> void:
-	var new_lvl = end_screen.instantiate()
-	get_tree().root.add_child(new_lvl)
 	print("Timer Stop")
 	
 func refill() -> void:

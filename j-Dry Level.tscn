@@ -1921,11 +1921,6 @@ script = ExtResource("16_oi7fx")
 [node name="bridge2" parent="CSGTerrain" instance=ExtResource("15_71qt0")]
 transform = Transform3D(8.83271, 0, 8.53077, 0, 10.7691, 0, -4.80216, 0, 15.6908, -51.2337, -2.26765, 49.2563)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGTerrain/bridge2"]
-transform = Transform3D(0.999972, 0, 0, 0, 1, 0, 5.21541e-07, 0, 1, 0.0255136, 0.0212969, -0.11963)
-use_collision = true
-size = Vector3(1.63794, 0.0262451, 5.69775)
-
 [node name="Hippocampus" parent="." instance=ExtResource("17_f5gtj")]
 transform = Transform3D(-3.78103e-07, 0, -8.65, 0, 8.65, 0, 8.65, 0, -3.78103e-07, -16.2992, 3.69273, -24.7739)
 
