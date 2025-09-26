@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_yiun5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_56emu"]
-[ext_resource type="FontFile" uid="uid://cnrneghp7qnrk" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="2_ar622"]
+[ext_resource type="FontFile" uid="uid://h1fak7cvdoy6" path="res://fonts/Jersey10-Regular.ttf" id="2_ar622"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ar622"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
