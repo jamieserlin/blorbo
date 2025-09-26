@@ -17,12 +17,12 @@
 [ext_resource type="Script" uid="uid://chd7im1g4agp0" path="res://addons/csg_terrain/csg_terrain_path.gd" id="16_oi7fx"]
 [ext_resource type="PackedScene" uid="uid://cammyb3ov7ssc" path="res://npc/hippocampus/Hippocampus.tscn" id="17_f5gtj"]
 [ext_resource type="PackedScene" uid="uid://dqi3flgdf473w" path="res://j-imports/low_poly_grey_boulder.glb" id="19_0rhos"]
-[ext_resource type="PackedScene" uid="uid://bhlq8b561q03e" path="res://j-imports/face.tscn" id="19_hl8kq"]
 [ext_resource type="PackedScene" uid="uid://ddpqdbdw4xe4s" path="res://models/homemade_usable/well.tscn" id="19_yykrs"]
 [ext_resource type="PackedScene" uid="uid://yt3se5r3ffby" path="res://models/homemade_usable/cabin.tscn" id="20_71qt0"]
 [ext_resource type="PackedScene" uid="uid://c1dmh0unjexip" path="res://j-imports/bloxy_cola.glb" id="20_hl8kq"]
 [ext_resource type="PackedScene" uid="uid://cuhrrsuppieji" path="res://models/homemade_usable/tree_2.tscn" id="20_yykrs"]
 [ext_resource type="PackedScene" uid="uid://bdujkgk4tysu6" path="res://models/homemade_usable/tree_1.tscn" id="21_yykrs"]
+[ext_resource type="PackedScene" uid="uid://cgdwv61kc8mhi" path="res://npc/hippocampus/face.tscn" id="24_01fgh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_trvuu"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -1394,9 +1394,6 @@ transform = Transform3D(8.83271, 0, 8.53077, 0, 10.7691, 0, -4.80216, 0, 15.6908
 [node name="Hippocampus" parent="." instance=ExtResource("17_f5gtj")]
 transform = Transform3D(-3.78103e-07, 0, -8.65, 0, 8.65, 0, 8.65, 0, -3.78103e-07, -13.8915, 3.69273, -26.2832)
 
-[node name="face" parent="." instance=ExtResource("19_hl8kq")]
-transform = Transform3D(0.97411, 0, 0.226073, 0, 1, 0, -0.226073, 0, 0.97411, -61.5547, 13.1666, -65.4188)
-
 [node name="coler" parent="." instance=ExtResource("20_hl8kq")]
 transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -63.9983, 11.867, 34.2614)
 
@@ -1427,3 +1424,6 @@ transform = Transform3D(2.8409, 0, 0, 0, 2.8409, 0, 0, 0, 2.8409, 243.615, 4.669
 
 [node name="tree_3" parent="." instance=ExtResource("21_yykrs")]
 transform = Transform3D(4.90162, 0, 0, 0, 4.90162, 0, 0, 0, 4.90162, 211.732, 4.69154, -40.8104)
+
+[node name="face2" parent="." instance=ExtResource("24_01fgh")]
+transform = Transform3D(28.5136, 0, 6.97302, 0, 29.3539, 0, -6.97302, 0, 28.5136, -61.0811, 12.6822, -65.0471)
