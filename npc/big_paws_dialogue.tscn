@@ -108,18 +108,22 @@ modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("2_va1wu")
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_cbonb")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_va1wu")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 38
 text = "Dialogue..."
+horizontal_alignment = 1
 seconds_per_pause_step = 0.01
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
