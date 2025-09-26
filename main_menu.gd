@@ -10,6 +10,8 @@ extends Control
 
 
 
+
+
 @onready var audio_manager = get_tree().get_first_node_in_group("audio_manager")
 var gameplay_scene = preload("res://j-Dry Level.tscn").instantiate()
 func _ready() -> void:
@@ -22,6 +24,7 @@ func _ready() -> void:
 func _on_start_game_button_pressed() -> void:
 	print("Start Game Pressed")
 	get_tree().root.add_child(gameplay_scene)
+	audio_manager.music1_play()
 	self.queue_free()
 	#get_tree().change_scene_to_file("res://j-Dry Level.tscn")
 

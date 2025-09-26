@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bhgru3dauvbjl"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_4xg0w"]
+[ext_resource type="Texture2D" uid="uid://ddlgtoip2w16v" path="res://j-imports/low_poly_grey_boulder_0.png" id="2_a5acx"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4xg0w")
+shader_parameter/albedo = ExtResource("2_a5acx")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0
