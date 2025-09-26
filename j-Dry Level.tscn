@@ -1,9 +1,9 @@
-[gd_scene load_steps=156 format=4 uid="uid://do75dcsddlng3"]
+[gd_scene load_steps=158 format=4 uid="uid://do75dcsddlng3"]
 
 [ext_resource type="Script" uid="uid://m2fvd5j6jd46" path="res://addons/stairs/stairs.gd" id="1_axyym"]
 [ext_resource type="PackedScene" uid="uid://dgkdd77jrqt3i" path="res://hydration.tscn" id="1_xl7v0"]
 [ext_resource type="PackedScene" uid="uid://3m2ib2is0d45" path="res://npc/hippocampus/climb.tscn" id="1_yykrs"]
-[ext_resource type="PackedScene" path="res://models/homemade_usable/winning_well.tscn" id="3_xl7v0"]
+[ext_resource type="PackedScene" uid="uid://drsi2tl7dnry" path="res://models/homemade_usable/winning_well.tscn" id="3_xl7v0"]
 [ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="5_71qt0"]
 [ext_resource type="PackedScene" uid="uid://dlxm3avha5lh4" path="res://npc/foggy/Foggy.tscn" id="5_hl8kq"]
 [ext_resource type="Script" uid="uid://bb2yrf3bebnkj" path="res://npc/foggy/Foggy.gd" id="6_hl8kq"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://flasieslch1p" path="res://npc/hippocampus/face.tscn" id="24_01fgh"]
 [ext_resource type="PackedScene" uid="uid://b4vo5upolp42q" path="res://npc/hippocampus/big_paws.tscn" id="24_2tceu"]
 [ext_resource type="PackedScene" uid="uid://dvkw7bqu7l5gv" path="res://models/homemade_usable/rockpool.tscn" id="25_2tceu"]
+[ext_resource type="Script" uid="uid://cn3ufil3gxstq" path="res://j-imports/bloxy_cola.gd" id="33_5w48b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_trvuu"]
 sky_top_color = Color(0.377264, 0.449915, 0.584313, 1)
@@ -928,6 +929,8 @@ _data = {
 }
 point_count = 9
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_04j21"]
+
 [node name="J-dryLevel" type="Node3D" groups=["dry_level"]]
 
 [node name="ThirstBar" parent="." instance=ExtResource("1_xl7v0")]
@@ -1246,7 +1249,7 @@ use_collision = true
 size = Vector3(23, 1, 17)
 
 [node name="Stairs" type="Node3D" parent="desert/p1"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.05186, 1, 4.59784e-08)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.05186, 1.20648, 4.59784e-08)
 script = ExtResource("1_axyym")
 size = Vector3(5, 2, 8.88895)
 step_count = 18
@@ -1923,9 +1926,6 @@ size = Vector3(1.63794, 0.0262451, 5.8562)
 [node name="Hippocampus" parent="." instance=ExtResource("17_f5gtj")]
 transform = Transform3D(-3.78103e-07, 0, -8.65, 0, 8.65, 0, 8.65, 0, -3.78103e-07, -16.2992, 3.69273, -24.7739)
 
-[node name="coler" parent="." instance=ExtResource("20_hl8kq")]
-transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -63.9983, 11.867, 34.2614)
-
 [node name="cabin" parent="." instance=ExtResource("20_71qt0")]
 transform = Transform3D(-0.530304, 0, -0.847808, 0, 1, 0, 0.847808, 0, -0.530304, -18.0201, 1.60257, -22.0639)
 
@@ -1959,3 +1959,53 @@ transform = Transform3D(-0.0136547, 0, -0.0393921, 0, 0.0416916, 0, 0.0393921, 0
 
 [node name="rockpool" parent="." instance=ExtResource("25_2tceu")]
 transform = Transform3D(12.9306, -0.0489639, 0, 0.195638, 3.23483, -0.255048, 0.00408095, 0.0674777, 12.2268, 215.875, 0.812157, -10.699)
+
+[node name="coler area" type="Area3D" parent="."]
+transform = Transform3D(1.38942, 0, 0, 0, 1.37974, 0.163767, 0, -0.163767, 1.37974, -14.8907, 1.86001, -4.13927)
+script = ExtResource("33_5w48b")
+
+[node name="coler" parent="coler area" instance=ExtResource("20_hl8kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area"]
+shape = SubResource("CylinderShape3D_04j21")
+
+[node name="coler area2" type="Area3D" parent="."]
+transform = Transform3D(1.93049, 0, 0, 0, 1.87686, 0.451912, 0, -0.451912, 1.87686, -35.5801, 1.57095, 58.9838)
+script = ExtResource("33_5w48b")
+
+[node name="coler" parent="coler area2" instance=ExtResource("20_hl8kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area2"]
+shape = SubResource("CylinderShape3D_04j21")
+
+[node name="coler area3" type="Area3D" parent="."]
+transform = Transform3D(1.48967, 0, 0, 0, 1.32643, 0.678067, 0, -0.678067, 1.32643, 59.4666, 15.1473, -8.56199)
+script = ExtResource("33_5w48b")
+
+[node name="coler" parent="coler area3" instance=ExtResource("20_hl8kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area3"]
+shape = SubResource("CylinderShape3D_04j21")
+
+[node name="coler area4" type="Area3D" parent="."]
+transform = Transform3D(1.48967, 0, 0, 0, 1.32643, 0.678067, 0, -0.678067, 1.32643, 131.243, 1.44161, -16.5573)
+script = ExtResource("33_5w48b")
+
+[node name="coler" parent="coler area4" instance=ExtResource("20_hl8kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area4"]
+shape = SubResource("CylinderShape3D_04j21")
+
+[node name="coler area5" type="Area3D" parent="."]
+transform = Transform3D(2.21912, 0, 0, 0, 1.29964, 1.79881, 0, -1.79881, 1.29964, 184.596, 13.6572, -0.0698752)
+script = ExtResource("33_5w48b")
+
+[node name="coler" parent="coler area5" instance=ExtResource("20_hl8kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822214, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coler area5"]
+shape = SubResource("CylinderShape3D_04j21")
