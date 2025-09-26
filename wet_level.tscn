@@ -1304,7 +1304,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_6a0fb")
 
 [node name="wet_foggy" parent="desert/p1/Cliffs" instance=ExtResource("10_8muuy")]
-transform = Transform3D(10.8951, 0, 0, 0, 10.8951, 0, 0, 0, 10.8951, -47.5403, 3.91166, 7.9056)
+transform = Transform3D(10.8951, 0, 0, 0, 10.8951, 0, 0, 0, 10.8951, -10.3132, 3.91166, 15.2894)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="desert/p1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, 0)
