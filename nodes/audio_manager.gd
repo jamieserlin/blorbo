@@ -13,8 +13,8 @@ var menu_up = preload("res://sounds/menu/menu_up.wav")
 var menu_select = preload("res://sounds/menu/sfx_menu_select5.wav")
 
 #Music sounds
-var music_1 = preload("res://sounds/music/That Zen Moment.mp3")
-var music_2 = preload("res://sounds/music/Vibing Over Venus.mp3")
+var music_1 = preload("res://sounds/music/pingus/snowlevel.mp3")
+var music_2 = preload("res://sounds/music/pingus/basiclevel.mp3")
 
 
 @onready var player_sfx = $player_sfx

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://dvkw7bqu7l5gv"]
 
 [ext_resource type="Material" uid="uid://c2wikmxgwek7a" path="res://materials/moss_stone.tres" id="1_v65n2"]
-[ext_resource type="Material" uid="uid://8rlh8ywhwq3n" path="res://materials/dissolve.tres" id="2_702ro"]
+[ext_resource type="Material" uid="uid://ccmvmd7jky5mh" path="res://materials/dissolve.tres" id="2_702ro"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4qys2"]
 _surfaces = [{
