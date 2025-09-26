@@ -33,6 +33,12 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"materials": {
+"Rock_Cave_Wall.004": {
+"use_external/enabled": true,
+"use_external/path": ""
+}
+},
 "nodes": {
 "PATH:Sketchfab_model/Grey Boulder_fbx/RootNode/Rock lp_001/Rock lp_001_Rock Cave Wall_004_0": {
 "generate/physics": true

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdgpbyi0a4oe3"
-path.s3tc="res://.godot/imported/wall_stone_multicolor.png-8925c7885470c0fe8f293667d375dcab.s3tc.ctex"
+uid="uid://cu1nig0aklqcu"
+path.s3tc="res://.godot/imported/v2.png-0c27e7f3b744d52bf413e9281a5457c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/cc0_level_textures/wall_stone_multicolor.png"
-dest_files=["res://.godot/imported/wall_stone_multicolor.png-8925c7885470c0fe8f293667d375dcab.s3tc.ctex"]
+source_file="res://j-imports/v2.png"
+dest_files=["res://.godot/imported/v2.png-0c27e7f3b744d52bf413e9281a5457c7.s3tc.ctex"]
 
 [params]
 
