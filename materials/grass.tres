@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ca716shk8dol8"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_322h8"]
+[ext_resource type="Texture2D" uid="uid://bk7uqoqc77kf" path="res://textures/grass.png" id="2_322h8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_322h8")
+shader_parameter/albedo = ExtResource("2_322h8")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0

@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://br2gyhsx6ocno"]
+[gd_scene load_steps=8 format=4 uid="uid://bipvr44ohgw81"]
 
-[ext_resource type="Material" uid="uid://g3srb2qg6sn7" path="res://materials/shrub.tres" id="1_y46j8"]
+[ext_resource type="Material" uid="uid://ca716shk8dol8" path="res://materials/grass.tres" id="1_kl2qe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4k3e"]
 
@@ -71,24 +71,24 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="shrub_p1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
-material_override = ExtResource("1_y46j8")
+material_override = ExtResource("1_kl2qe")
 mesh = SubResource("ArrayMesh_djqgh")
 skeleton = NodePath("")
 
 [node name="shrub_p2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 0, 0, 0)
-material_override = ExtResource("1_y46j8")
+material_override = ExtResource("1_kl2qe")
 mesh = SubResource("ArrayMesh_a0376")
 skeleton = NodePath("")
 
 [node name="shrub_p3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, 0, 0, 0)
-material_override = ExtResource("1_y46j8")
+material_override = ExtResource("1_kl2qe")
 mesh = SubResource("ArrayMesh_djqgh")
 skeleton = NodePath("")
 
 [node name="shrub_p4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, 0, 0, 0)
-material_override = ExtResource("1_y46j8")
+material_override = ExtResource("1_kl2qe")
 mesh = SubResource("ArrayMesh_a0376")
 skeleton = NodePath("")

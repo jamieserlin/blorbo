@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://g3srb2qg6sn7"]
+
+[ext_resource type="Shader" uid="uid://cxvvygj4xferq" path="res://shaders/psx.gdshader" id="1_8cfs6"]
+[ext_resource type="Texture2D" uid="uid://bdabxwkpccsc" path="res://textures/shrub.png" id="2_8cfs6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8cfs6")
+shader_parameter/albedo = ExtResource("2_8cfs6")
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0

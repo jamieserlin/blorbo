@@ -1,0 +1,262 @@
+[gd_scene load_steps=8 format=4 uid="uid://dly10r4kuyoma"]
+
+[ext_resource type="Material" uid="uid://ca716shk8dol8" path="res://materials/grass.tres" id="1_mcwp3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4k3e"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yplyi"]
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAAAAAAAP//AAD//wAAAAD//wAAAAD///////8AAAAAAAAAAAAA/////wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_djqgh"]
+resource_name = "shrub_Plane"
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAAAAAAAP////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_v4k3e"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//////cT//wAAAAD9xP//AAD///3EAAD//wAA/cT///////9aFAAAAAAAAFoU/////wAAWhQAAAAA//9aFEvJpWRLyaVkS8mlZEvJpWTfa++132vvtd9r77Xfa++1")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yplyi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yretm"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ruvah"]
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAAAAAAAP//AAD//wAAAAD//wAAAAD///////8AAAAAAAAAAAAA/////wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a0376"]
+resource_name = "shrub_Plane_001"
+_surfaces = [{
+"aabb": AABB(-0.75557, -0.655067, -1, 1.51114, 1.31013, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAAAAAAAP////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_yretm"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//////cT//wAAAAD9xP//AAD///3EAAD//wAA/cT///////9aFAAAAAAAAFoU/////wAAWhQAAAAA//9aFEvJpWRLyaVkS8mlZEvJpWTfa++132vvtd9r77Xfa++1")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ruvah")
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="shrub_p1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 0, 0, 0)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, 0, 0, 0)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, 0, 0, 0)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.923356, 0, -1.01799)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 0.923356, 0, -1.01799)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, 0.923356, 0, -1.01799)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, 0.923356, 0, -1.01799)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -1.2951, 0, -0.504379)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, -1.2951, 0, -0.504379)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, -1.2951, 0, -0.504379)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p12" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, -1.2951, 0, -0.504379)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.371743, 0, -1.52237)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, -0.371743, 0, -1.52237)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p15" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, -0.371743, 0, -1.52237)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p16" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, -0.371743, 0, -1.52237)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p17" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.272089, 0, 1.73028)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p18" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 0.272089, 0, 1.73028)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p19" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, 0.272089, 0, 1.73028)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p20" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, 0.272089, 0, 1.73028)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p21" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.19544, 0, 0.712289)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p22" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, -2.98023e-08, -2.98023e-08, 0, -1, -0.707107, 0.707107, 5.96046e-08, 1.19544, 0, 0.712289)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p23" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 4.37114e-08, -1, 0, -1, -4.37114e-08, 1.19544, 0, 0.712289)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p24" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 0, 4.37114e-08, -1, 0.707107, -0.707107, -3.09086e-08, 1.19544, 0, 0.712289)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p25" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.448258, 0.893904, 0, 0, 0, -1, -0.893904, 0.448258, 0, -1.30057, 0, 1.98256)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p26" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.315119, 0.949052, 3.99217e-08, -2.98023e-08, 0, -1, -0.949052, -0.315119, 5.33587e-08, -1.30057, 0, 1.98256)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p27" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.448258, -0.893904, -3.90738e-08, 0, 4.37114e-08, -1, 0.893904, -0.448258, -1.9594e-08, -1.30057, 0, 1.98256)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p28" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.315119, -0.949052, -4.14844e-08, 0, 4.37114e-08, -1, 0.949052, 0.315119, 1.37743e-08, -1.30057, 0, 1.98256)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p29" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.448258, 0.893904, 0, 0, 0, -1, -0.893904, 0.448258, 0, -1.79666, 0, 0.700851)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p30" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.315119, 0.949052, 3.99217e-08, -2.98023e-08, 0, -1, -0.949052, -0.315119, 5.33587e-08, -1.79666, 0, 0.700851)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
+
+[node name="shrub_p31" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.448258, -0.893904, -3.90738e-08, 0, 4.37114e-08, -1, 0.893904, -0.448258, -1.9594e-08, -1.79666, 0, 0.700851)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_djqgh")
+skeleton = NodePath("")
+
+[node name="shrub_p32" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.315119, -0.949052, -4.14844e-08, 0, 4.37114e-08, -1, 0.949052, 0.315119, 1.37743e-08, -1.79666, 0, 0.700851)
+material_override = ExtResource("1_mcwp3")
+mesh = SubResource("ArrayMesh_a0376")
+skeleton = NodePath("")
