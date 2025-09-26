@@ -10,5 +10,5 @@ shader_parameter/albedo = ExtResource("2_7x1ou")
 shader_parameter/jitter = 0.5
 shader_parameter/jitter_z_coordinate = true
 shader_parameter/jitter_depth_independent = true
-shader_parameter/affine_texture_mapping = true
+shader_parameter/affine_texture_mapping = false
 shader_parameter/alpha_scissor = 1.0
