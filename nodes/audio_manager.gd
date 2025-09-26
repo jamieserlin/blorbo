@@ -16,8 +16,9 @@ var sip = preload("res://sounds/player_sfx/sip.wav")
 var trans = preload("res://sounds/player_sfx/sfx_sounds_powerup16.wav")
 
 #Music sounds
-var music_1 = preload("res://sounds/music/pingus/snowlevel.mp3")
+var music_1 = preload("res://sounds/music/That Zen Moment.mp3")
 var music_2 = preload("res://sounds/music/pingus/basiclevel.mp3")
+var music_3 = preload("res://sounds/music/pingus/snowlevel.mp3")
 
 
 @onready var player_sfx = $player_sfx
@@ -32,6 +33,11 @@ func music1_play():
 func music2_play():
 	print("Music Time!")
 	music_sfx.stream = music_2
+	music_sfx.play()
+	
+func music3_play():
+	print("Music Time!")
+	music_sfx.stream = music_3
 	music_sfx.play()
 
 func _ready() -> void:
