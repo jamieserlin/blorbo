@@ -11,7 +11,7 @@ extends CharacterBody3D
 
 @onready var anim_sprite = $Node3D/AnimatedSprite3D
 
-var in_dialogue
+var in_dialogue = false
 var can_interact = false
 ##Movement References
 @export_group("Movement")
@@ -53,6 +53,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		"Joy_right", "Joy_up", "Joy_down") * 3.5
 
 func _physics_process(delta: float) -> void:
+	if get_tree().get_first_node_in_group("hippo_dialogue") != null:
+		in_dialogue = true
+	else:
+		in_dialogue = false
 	if can_interact:
 		interact_visual.show()
 	else:

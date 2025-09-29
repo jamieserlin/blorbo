@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Interact") && in_body && !started:
+	if Input.is_action_just_pressed("Interact") && in_body && !started && !get_tree().get_first_node_in_group("player").in_dialogue:
 			var new_enemy = my_scene.instantiate()
 			add_child(new_enemy)
 			balloon = get_tree().get_first_node_in_group("hippo_dialogue")

@@ -15,6 +15,7 @@ extends Control
 @onready var audio_manager = get_tree().get_first_node_in_group("audio_manager")
 var gameplay_scene = preload("res://j-Dry Level.tscn").instantiate()
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$VBoxContainer/StartGameButton.grab_focus()
 	v_box_container.visible = true
 	options_menu.visible = false

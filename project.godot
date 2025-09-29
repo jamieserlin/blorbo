@@ -44,6 +44,7 @@ hippo_dialogue=""
 dry_level=""
 hydration=""
 water_respawn=""
+death_screen=""
 
 [gui]
 

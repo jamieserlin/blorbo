@@ -12,12 +12,17 @@ func _ready() -> void:
 	print("Initalised")
 	
 func _process(delta: float) -> void:
+	if get_tree().get_first_node_in_group("hippo_dialogue") != null:
+		can_remove = false
+	else:
+		can_remove = true
 	if can_remove:
 		Thirst = 2 * timer.time_left
 		$ProgressBar.value = Thirst
 	if Thirst <= 0:
 		var new_lvl = end_screen.instantiate()
 		get_tree().root.add_child(new_lvl)
+		self.queue_free()
 
 func _on_timer_timeout() -> void:
 	print("Timer Stop")
