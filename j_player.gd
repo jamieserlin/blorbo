@@ -98,8 +98,12 @@ func _physics_process(delta: float) -> void:
 		audio_manager.player_jump()
 		velocity.y += jump_impulse
 		has_jumped = true
+		
 	if !is_on_floor():
 		#anim_sprite.stop()
+		if $CameraHolder/SpringArm3D.position.y <= 0.1:
+			$CameraHolder/SpringArm3D.position.y += 12 * delta
+		
 		anim_sprite.play("jump")
 		
 	##DIVING
@@ -113,9 +117,16 @@ func _physics_process(delta: float) -> void:
 	if is_starting_dive and !has_dived and !is_on_floor():
 		audio_manager.player_dive()
 		velocity.y += jump_impulse /2
+		if %Camera3D.fov <= 90:
+			%Camera3D.fov += 1.5
+			
 		velocity = dive_impulse * -forward
 		has_dived = true
 	if is_on_floor():
+		if $CameraHolder/SpringArm3D.position.y >= 0:
+			$CameraHolder/SpringArm3D.position.y -= 10.0 * delta
+		if %Camera3D.fov > 75:
+			%Camera3D.fov -= 1
 		has_dived = false;
 		
 	move_and_slide()
