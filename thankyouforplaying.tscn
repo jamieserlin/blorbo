@@ -1,6 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjldklh7jaggh"]
 
-[ext_resource type="Script" uid="uid://bid8lj4a2wm40" path="res://quit.gd" id="1_4j1v5"]
+[sub_resource type="GDScript" id="GDScript_h31mn"]
+script/source = "extends Control
+const menu_scene = preload(\"res://nodes/root_node.tscn\")
+
+func _on_timer_timeout() -> void:
+	get_tree().get_first_node_in_group(\"dry_level\").queue_free()
+	get_tree().reload_current_scene()
+	get_tree().get_first_node_in_group(\"death_screen\").queue_free()
+	
+	pass # Replace with function body.
+"
 
 [node name="thankyouforplaying" type="Control"]
 layout_mode = 3
@@ -9,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4j1v5")
+script = SubResource("GDScript_h31mn")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_3d_body_shape_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		player_body = body
 		in_body = true
@@ -29,7 +29,7 @@ func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_inde
 	pass # Replace with function body.
 
 
-func _on_area_3d_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_3d_body_shape_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		in_body = false
 		player_body._gravity = -30

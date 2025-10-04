@@ -81,7 +81,7 @@ animations = [{
 [sub_resource type="SphereShape3D" id="SphereShape3D_3mo4v"]
 
 [node name="j-Player" type="CharacterBody3D" groups=["player"]]
-safe_margin = 0.1
+safe_margin = 0.2
 script = ExtResource("1_7un63")
 
 [node name="Node3D" type="Node3D" parent="."]
