@@ -22,7 +22,7 @@ var can_interact = false
 
 ##Jump References
 @export var is_starting_jump := Input.is_action_just_pressed("Jump") and is_on_floor()
-@export var jump_impulse := 12.0
+@export var jump_impulse := 13.5
 @export var _gravity = -30.0
 
 ##Dive References
@@ -31,6 +31,8 @@ var can_interact = false
 @export var has_dived = false;
 @export var can_dive = true;
 
+var _camera_input_direction := Vector2.ZERO
+
 
 func _input(event:InputEvent) -> void:
 	if event.is_action_pressed("LeftClick"):
@@ -38,7 +40,6 @@ func _input(event:InputEvent) -> void:
 	if event.is_action_pressed("unbind"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-var _camera_input_direction := Vector2.ZERO
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
@@ -49,10 +50,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_camera_motion:
 		_camera_input_direction = event.screen_relative * mouse_sensitivity
 	else:
+	
 		_camera_input_direction = Input.get_vector("Joy_left", 
 		"Joy_right", "Joy_up", "Joy_down") * 3.5
 
 func _physics_process(delta: float) -> void:
+	_camera_input_direction = Input.get_vector("Joy_left", 
+		"Joy_right", "Joy_up", "Joy_down") * 3.5
 	if get_tree().get_first_node_in_group("hippo_dialogue") != null:
 		in_dialogue = true
 	else:

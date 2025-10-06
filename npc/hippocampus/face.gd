@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_area_3d_body_shape_entered(body: Node3D) -> void:
+func _on_area_3d_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
 		body.can_interact = true
 		in_body = true
@@ -42,7 +42,7 @@ func _on_area_3d_body_shape_entered(body: Node3D) -> void:
 	pass # Replace with function body.
 
 
-func _on_area_3d_body_shape_exited(body: Node3D) -> void:
+func _on_area_3d_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("player"):
 		body.can_interact = false
 		body.in_dialogue = false
