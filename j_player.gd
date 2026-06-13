@@ -43,20 +43,18 @@ func _input(event:InputEvent) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
-	var is_camera_motion := (
-		event is InputEventMouseMotion and 
-		Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
-	)
-	if is_camera_motion:
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		_camera_input_direction = event.screen_relative * mouse_sensitivity
-	else:
-	
-		_camera_input_direction = Input.get_vector("Joy_left", 
+		_camera_input_direction.x = event.relative.x * 0.8
+		_camera_input_direction.y = event.relative.y * 0.8
+		#_camera_input_direction.x = clamp(_camera_input_direction.x, -PI/2.1, PI/2.1)
+func camera_joystick_aim():
+	_camera_input_direction += Input.get_vector("Joy_left", 
 		"Joy_right", "Joy_up", "Joy_down") * 3.5
-
+	pass
+		
 func _physics_process(delta: float) -> void:
-	_camera_input_direction = Input.get_vector("Joy_left", 
-		"Joy_right", "Joy_up", "Joy_down") * 3.5
+	camera_joystick_aim()
 	if get_tree().get_first_node_in_group("hippo_dialogue") != null:
 		in_dialogue = true
 	else:
